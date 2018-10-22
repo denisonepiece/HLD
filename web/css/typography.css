@@ -58,6 +58,9 @@ h5 {
     font-size: 1.5rem;
 }
 
+.hGray-v2 {
+    color: var(--grayColor-v2);
+}
 
 /* Оформление заголовка */
 

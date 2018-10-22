@@ -3,15 +3,17 @@
 	flex-wrap: wrap;
 	position: relative;
     box-sizing: border-box;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 .tiles-wrap__tile {
 	position: relative;
 	width: calc((100% / 3) - 2em);
 	padding-bottom: 25%; 
-	margin-left: 1em;
-	margin-right: 1em;
-	margin-bottom: 2em;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 2rem;
 	margin-top: 0;
 	display: block;
 }
@@ -88,6 +90,7 @@
 
 
 @media (max-width: 1365px) {
+
 	.tiles-wrap .tiles-wrap__tile {
 		width: calc((100% / 2) - 2em);
 		padding-bottom: 35%;
@@ -95,6 +98,12 @@
 }
 
 @media (max-width: 696px) {
+
+	.tiles-wrap {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.tiles-wrap .tiles-wrap__tile {
 		width: 100%;
 		padding-bottom: 70%;

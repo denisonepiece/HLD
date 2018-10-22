@@ -1,17 +1,3 @@
-<?php
-
-/* @var $this \yii\web\View */
-/* @var $content string */
-
-use app\widgets\Alert;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
-
-AppAsset::register($this);
-?>
 
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,17 +5,6 @@ AppAsset::register($this);
 <head>
     <meta charset="UTF-8">
     <title>HLD agency</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="css/blocks.css">
-    <link rel="stylesheet" href="libs/slick-slider/css/slick-theme.min.css">
-    <link rel="stylesheet" href="libs/slick-slider/css/slick.min.css">
-    <link rel="stylesheet" href="css/slick-custom.css">
-    <link rel="stylesheet" href="libs/base/css/flexboxgrid.css">
-    <link rel="stylesheet" href="libs/base/css/normalize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php $this->head() ?>
 </head>
@@ -96,6 +71,7 @@ AppAsset::register($this);
                     <h1>Запуск и поддержка бизнеса в digital-среде</h1>
                 </div>
             </div>
+
         </header>
         <?= $content ?>
     </div>
@@ -150,31 +126,6 @@ AppAsset::register($this);
         </div>
     </footer>
 </div>
-<!-- JQ локально -->
-<script src="libs/base/js/jquery-3.3.1.min.js"></script>
-
-<!-- Скрипт работы адаптивного меню -->
-<script src="js/menu.js"></script>
-
-<!-- Библиотека hover-эффетка для плиток проектов -->
-<script src="libs/vanilla-tilt.min.js"></script>
-
-<!-- Библиотека слайдера на главной -->
-<script src="libs/slick-slider/js/slick.min.js"></script>
-<!-- Кастомизация/настройка слайдера -->
-<script src="js/slick-init.js"></script>
-
-<!-- Скрипт плавности скролла -->
-<script src="libs/smooth-scroll.min.js"></script>
-
-<!-- Библиотека parallax-эффекта на главной -->
-<script src="libs/rellax.min.js"></script>
-<!-- Инициализация parallax на главной -->
-<script>
-    var rellax = new Rellax('.rellax');
-</script>
-<!-- Кастомизация/настройка parallax на главной -->
-<script src="js/rellax-init.js"></script>
 <?php $this->endBody() ?>
 </body>
 </html>

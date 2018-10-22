@@ -27,7 +27,6 @@
 	--grayColor-v1:#F9F9F9;
 }
 
-
 a {
 	text-decoration: none;
 	color: var(--blackColor);
@@ -72,8 +71,6 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-
-
 }
 
 .wrapper-content {
@@ -175,7 +172,8 @@ body.modalActive {
 
 .link-nav ul li {
 	list-style: none;
-	margin-right: 3.7rem;
+	font-size: 0.813rem;
+	margin-right: 3.7em;
 }
 
 .link-nav ul li a {
@@ -186,7 +184,6 @@ body.modalActive {
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
-	font-size: 0.813rem;
 	letter-spacing: 0.075em;
 	font-family: 'MontserratRegular';
 }
@@ -221,6 +218,15 @@ body.modalActive {
 .info-nav span {
 	font-family: 'MontserratExtraBold';
 	font-size: 1.2rem;
+}
+
+/*** Кастом навигации для целей помимо осн.меню ***/
+.link-nav.custom-v1 {
+	height: 3em;
+}
+
+.link-nav.custom-v1 ul li {
+	margin-right: 5em;
 }
 
 /** Медиа-запросы **/
@@ -291,6 +297,27 @@ body.modalActive {
 	.info-nav span {
 		font-size: 1.8rem;
 	}
+
+/*** Кастом навигации для целей помимо осн.меню ***/
+
+	.link-nav.custom-v1 {
+		height: 0;
+	}
+
+	.link-nav.custom-v1 ul {
+		flex-direction: row;
+	}
+
+	.link-nav.custom-v1 ul li {
+		margin-right: 2.5em;
+	}
+
+	.link-nav.custom-v1 ul li a {
+		font-size: 1rem;
+		display: block;
+		margin-bottom: 0;
+	}
+
 
 	.responsive-navigation {
 		display: flex;
