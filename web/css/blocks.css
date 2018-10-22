@@ -1,0 +1,32 @@
+
+/* Секции 1 */
+.section-v1 {
+	padding: 6rem 0;
+}
+
+/* Относительные оступы вниз от заголовков */
+.header-block.tog-underCont > .heading {
+	margin-bottom: .9em;
+}
+
+/* Оступы вниз от отопис.параграфа в заголовке */
+.header-block__p.tog-underCont {
+	margin-bottom: 5rem;
+}
+
+/* Оступы вниз от контента сеции */
+.section__inner-content.tog-underElements {
+	margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+	.section__inner-content.tog-underElements {
+		margin-bottom: 2.5rem;
+	}
+}
+
+@media screen and (max-width:979px) {
+	.section-v1 {
+		padding: 4.5rem 0;
+	}
+}

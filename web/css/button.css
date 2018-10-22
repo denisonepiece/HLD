@@ -1,0 +1,155 @@
+/**** Ссылки ****/
+
+a.stock-link {
+    color: var(--pinkColor);
+    font-family: 'MontserratSemiBold';
+    font-size: 1rem;
+    transition: all 250ms ease-out;
+}
+
+a.stock-link:hover {
+	background: var(--pinkColor);
+	color: var(--whiteColor);
+}
+
+
+/**** Текстовые кнопки со стрелкой ****/
+.link-btn {
+	text-decoration: none;
+	font-family: 'MontserratBold';
+	display: inline-flex;
+	align-items: center;
+	transition: all 250ms ease-out;
+}
+
+.link-btn:active {
+	-webkit-transform: translateX(.3em);
+	transform: translateX(.3em);
+}
+
+.link-btn svg {
+	width: 2.9em;
+	transition: all .8s cubic-bezier(.17,1,.60,1);
+}
+
+.link-btn:hover svg {
+	-webkit-transform: translateX(.5em);
+	transform: translateX(.5em);
+}
+
+.link-btn span {
+	margin-right: .8em;
+}
+
+.one-link-btn {
+	color: #F53B59;
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+	.one-link-btn {
+		font-size: 1.3rem;
+	}
+}
+
+.one-link-btn svg {
+	fill: var(--pinkColor);
+}
+
+.two-link-btn {
+	color: var(--blackColor);
+	font-style: 0.875rem;
+}
+
+.two-link-btn svg {
+	fill: var(--blackColor);
+}
+
+/**** Блочные кнопки ****/
+.block-btn {
+	text-decoration: none;
+	font-family: 'MontserratRegular';
+	transition: all 250ms ease-out;
+}
+
+.block-btn:active {
+	-webkit-transform: translateY(.3em);
+	transform: translateY(.3em);
+}
+
+.one-block-btn {
+	color: #FFF;
+	display: block;
+	width: fit-content;
+	background-color: var(--pinkColor);
+	padding: 1em 2em;
+	font-size: 1.125rem;
+}
+
+/** Другие размеры **/
+
+.one-block-btn.v2 {
+	font-size: 1rem;
+}
+
+.one-block-btn.v3 {
+    font-size: 0.875rem;
+}
+
+.one-block-btn:hover {
+	background-color: #EF0F3A;
+}
+
+
+
+
+/**** Кастомные чекбоксы ****/
+
+
+/** Базовые **/
+
+.hide-checkbox + label {
+	text-align: center;
+	display: block;
+	transition: all 200ms ease-out;
+	cursor: pointer;
+	outline: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none
+}
+
+.hide-checkbox + label:active {
+	-webkit-transform: translateY(.3em);
+	transform: translateY(.3em);
+}
+
+/** Кстомизаци на версиии **/
+
+/* Индивидуальная обертка */
+.checkbox-custom-v1 {
+	display: flex;
+}
+
+.checkbox-custom-v1__position {
+	margin-right: 1em;
+}
+
+.checkbox-custom-v1__position:last-child{
+	margin-right: 0;
+}
+
+/* 1 версия элементов*/
+.checkbox-custom-v1__position .hide-checkbox + label{
+	background-color: var(--pinkColor);
+	color: var(--whiteColor);
+	font-family: 'MontserratRegular';
+	font-size: 0.875rem;
+	padding: 0.625em 0.813em
+}
+
+.checkbox-custom-v1__position .hide-checkbox:checked + label {
+	background-color: var(--grayColor-v2);
+	color: var(--grayColor-v4);
+}
+

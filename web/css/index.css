@@ -1,0 +1,174 @@
+.intro{
+	height: 100vh;
+	position: relative;
+	padding: 0 1.875em;
+}
+
+.intro__header {
+	position: absolute;
+	top: 20%;
+	width: 50%;
+}
+
+
+.intro__header h1 {
+	text-transform: uppercase;
+	z-index: 400;
+}
+
+
+@media screen and (max-width: 440px) {
+	.intro {
+		height: 100vh;
+		padding: 0 1.875em;
+	}
+
+	.intro__header {
+		top: 30%;
+		width: 67%;
+	}
+}
+
+
+
+.parallax-elem {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.parallax-elem__inner {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+
+
+
+.parallax-elem__artist {
+	position: absolute;
+}
+
+.parallax-elem__artist.c,
+.parallax-elem__artist.d,
+.parallax-elem__artist.l,
+.parallax-elem__artist.o,
+.parallax-elem__artist.p {
+	z-index: 500;
+}
+
+
+.parallax-elem__artist.a {
+	top: 14%;
+	left: 18%;
+	background: url(../img/parallax/a.png);
+	background-size: contain;
+	height: 3.813rem;
+	width: 3.875rem;
+}
+
+.parallax-elem__artist.b {
+	top: 17%;
+	left: 50%;
+	background: url(../img/parallax/b.png);
+	background-size: contain;
+	width: 6.188rem;
+	height: 6.500rem;
+}
+
+.parallax-elem__artist.c {
+	top: 21%;
+	right: 10%;
+	background: url(../img/parallax/c.png);
+	background-size: contain;
+	width: 8.250rem;
+	height: 6.563rem;
+}
+
+.parallax-elem__artist.d {
+	top: 60%;
+	left: 0;
+	background: url(../img/parallax/d.png);
+	background-size: contain;
+	width: 23.125rem;
+	height: 11.750rem;
+}
+
+.parallax-elem__artist.e {
+	top: 66%;
+	left: 30%;
+	background: url(../img/parallax/e.png);
+	background-size: contain;
+	width: 3.063rem;
+	height: 2.125rem;
+}
+
+.parallax-elem__artist.f {
+	top: 56%;
+	left: 48%;
+	background: url(../img/parallax/f.png);
+	background-size: contain;
+	width: 5.250rem;
+	height: 3.125rem;	
+}
+
+.parallax-elem__artist.g {
+	top: 50%;
+	right: 5%;
+	background: url(../img/parallax/g.png);
+	background-size: contain;
+	width: 4.750rem;
+	height: 2.625rem;	
+}
+
+.parallax-elem__artist.u {
+	top: 85%;
+	left: 24%;
+	background: url(../img/parallax/u.png);
+	background-size: contain;
+	width: 8.125rem;
+	height: 4.063rem;		
+}
+
+.parallax-elem__artist.k {
+	top: 79%;
+	left: 42%;
+	background: url(../img/parallax/k.png);
+	background-size: contain;
+	width: 6.063rem;
+	height: 2.438rem;		
+}
+
+.parallax-elem__artist.l {
+	top: 65%;
+	left: 63%;
+	background: url(../img/parallax/l.png);
+	background-size: contain;
+	width: 6.500rem;
+	height: 11.125rem;	
+}
+
+.parallax-elem__artist.o {
+	top: 74%;
+	right: 12%;
+	background: url(../img/parallax/o.png);
+	background-size: contain;
+	width: 16.500rem;
+	height: 5.063rem;		
+}
+
+.parallax-elem__artist.p {
+	top: 73%;
+	right: 0;
+	background: url(../img/parallax/p.png);
+	background-size: contain;
+	width: 12.250rem;
+	height: 17.938rem;	
+}
+
+
+/** прописать запросы на изменение 
+размера блоков и положение **/

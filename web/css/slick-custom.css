@@ -1,0 +1,140 @@
+/***** -START- oneVersion для портолио на главной *****/
+.slider-oneVers div {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.slider-oneVers__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-oneVers__left-block {
+  overflow: hidden;
+  width: 70%;
+}
+
+.slider-oneVers__img-slides {
+  margin: 0;
+  outline: none;
+}
+
+.slider-oneVers__slide {
+  height: 30rem;
+}
+
+.slick-slider {
+  margin: 0;
+}
+
+.slider-oneVers__right-block {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--grayColor-v1);
+}
+
+.slider-oneVers__content-slides {
+  height: 100%;
+}
+
+#slick-1 .slick-dots {
+  bottom: -15%;
+  right: 0;
+  width: auto;
+  z-index: 9999;
+}
+
+#slick-1 .slick-dots li {
+  width: 1.5rem;
+  height: .3rem;
+  background: var(--grayColor-v2);
+}
+
+/**#slick-1 .slick-dots li button {
+  width: 40px;
+  height: 5px;
+}**/
+#slick-1 .slick-dots li.slick-active, #slick-1 .slick-dots li:hover {
+  background: var(--pinkColor);
+}
+
+#slick-1 .slick-dots li button, #slick-1 .slick-dots li button:before {
+  color: transparent;
+  opacity: 0;
+}
+
+/* progress bar */
+.slider-progress {
+  width: 100%;
+  height: 0.188rem;
+  background: var(--grayColor-v2);
+}
+
+.slider-progress .progress {
+  width: 0%;
+  height: 0.188rem;
+  background: var(--pinkColor);
+}
+
+.slider-oneVers__label-desc .label {
+  color: var(--grayColor-v4);
+}
+
+.slick-slider .slick-list, .slick-slider .slick-track {
+  height: 100%;
+}
+
+.slider-oneVers__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2.8em 2.5em;
+}
+
+.slider-oneVers__desc:hover .slider-oneVers__header-desc {
+  color: var(--pinkColor);
+}
+
+.slider-oneVers__header-desc {
+  margin-bottom: 1.8em;
+  transition: all 150ms ease-out;
+}
+
+.slider-oneVers__text-desc {
+  margin-bottom: 1.8em;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+@media screen and (max-width:1370px) {
+  .slider-oneVers__left-block {
+    width: 65%;
+  }
+
+  .slider-oneVers__right-block {
+    width: 35%;
+  }
+
+  .slider-oneVers__slide {
+    height: 27rem;
+  }
+
+}
+
+@media screen and (max-width:995px) {
+  .slider-oneVers__left-block {
+    width: 55%;
+  }
+
+  .slider-oneVers__right-block {
+    width: 45%;
+  }
+
+}
+
+/***** -END- oneVersion для портолио на главной *****/

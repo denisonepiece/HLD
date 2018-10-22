@@ -1,0 +1,439 @@
+/***** Препеменные цветов *****/
+:root {
+	--pinkColor: #F53B59;
+}
+
+:root {
+	--blackColor: #000000;
+}
+
+:root {
+	--whiteColor: #FFFFFF;
+}
+
+:root {
+	--grayColor-v4:#666666;
+}
+
+:root {
+	--grayColor-v3:#979797;
+}
+
+:root {
+	--grayColor-v2:#E6E6E6;
+}
+
+:root {
+	--grayColor-v1:#F9F9F9;
+}
+
+
+a {
+	text-decoration: none;
+	color: var(--blackColor);
+}
+
+body {
+	color: var(--blackColor);
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+@media screen and (max-width:1326px) {
+	html {
+		font-size: 15px;
+	}
+
+}
+
+@media screen and (max-width:1170px) {
+	html {
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width:979px) {
+	html {
+		font-size: 13px;
+	}
+
+}
+
+@media screen and (max-width:767px) {
+	html {
+		font-size: 11px;
+	}
+
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+
+}
+
+.wrapper-content {
+	width: 100%;
+	overflow: hidden;
+	flex: 1;
+}
+
+body.modalActive {
+	overflow: hidden;
+}
+
+/***** Навигация *****/
+
+/*** Общее ***/
+
+.navigation-wrp {
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	z-index: 1000;
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+}
+
+.navigation-inner {
+	position: relative;
+	overflow: hidden;
+	padding: 0 1.875rem;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation-right {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation-right {
+	flex-grow: 3;
+}
+
+.navigation-left {
+	flex-grow: 1;
+	padding: 1rem 0;
+}
+
+/*** Логотип ***/
+.logo {
+	display: inline-flex;
+	position: relative;
+}
+
+.logo__emblem {
+	height: 2rem;
+	width: 3.3rem;
+	background: url(../img/logo.svg) no-repeat;
+	background-size: 9rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 19;
+}
+
+.logo__text-elements {
+	display: flex;
+	z-index: 20;
+	transition: all 150ms ease-out;
+	background: url(../img/logo.svg) no-repeat right;
+	background-color: #FFF;
+	background-size: 9rem;
+	height: 2rem;
+	width: 4.7rem;
+}
+
+/** Анимация HLD **/
+.logo:hover .logo__text-elements {
+	-webkit-transform: translateX(3.6rem);
+	transform: translateX(3.6rem);
+}
+
+/*** Ссылки ***/
+.link-nav {
+	display: flex;
+}
+
+.link-nav ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.link-nav ul li {
+	list-style: none;
+	margin-right: 3.7rem;
+}
+
+.link-nav ul li a {
+	text-transform: uppercase;
+	color: var(--blackColor);
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	font-size: 0.813rem;
+	letter-spacing: 0.075em;
+	font-family: 'MontserratRegular';
+}
+
+.link-nav ul li a:hover {
+	color: var(--pinkColor);
+}
+
+.link-nav ul li a.link-nav__active {
+	color: var(--pinkColor);
+	position: relative;
+}
+
+.link-nav ul li a.link-nav__active::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .2rem;
+	left: 0;
+	top: 0;
+	background: var(--pinkColor);
+}
+
+/*** Контакты ***/
+.info-nav {
+	font-family: 'MontserratRegular';
+	font-size: .9rem;
+	display: flex;
+	align-items: center;
+}
+
+.info-nav span {
+	font-family: 'MontserratExtraBold';
+	font-size: 1.2rem;
+}
+
+/** Медиа-запросы **/
+@media screen and (max-width:1190px) {
+	.navigation-right {
+		flex-grow: 2;
+	}
+
+	.navigation-left {
+		flex-grow: 3;
+	}
+
+}
+
+@media screen and (max-width:991px) {
+	.navigation-inner {
+		padding: 0;
+	}
+
+	.navigation {
+		position: fixed;
+		background-color: #FFF;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		transition: all 300ms ease-out;
+		visibility: hidden;
+		opacity: 0;
+		top: -7vh;
+		padding: 3rem 2rem;
+	}
+
+	.navigation-active {
+		visibility: visible;
+		opacity: 1;
+		top: 7vh;
+	}
+
+	.navigation-left {
+		display: none;
+	}
+
+	.navigation-right {
+		flex-direction: column;
+		flex-grow: 0;
+		align-self: flex-start;
+	}
+
+	.link-nav ul {
+		flex-direction: column;
+	}
+
+	.link-nav ul li a {
+		font-family: 'MontserratExtraBold';
+		font-size: 2rem;
+		display: block;
+		margin-bottom: 2rem;
+	}
+
+	.link-nav ul li a.link-nav__active::after {
+		display: none;
+	}
+
+	.info-nav {
+		font-size: 1.4rem;
+	}
+
+	.info-nav span {
+		font-size: 1.8rem;
+	}
+
+	.responsive-navigation {
+		display: flex;
+		justify-content: space-between;
+		padding: .8rem 2rem;
+		align-items: center;
+	}
+
+	.responsive-navigation__logo {
+		height: 2.5rem;
+		width: 8rem;
+		background: url(../img/logo.svg) no-repeat left center;
+	}
+
+	/** Кнопка вызова моб. меню **/
+	.responsive-navigation__humburger {
+		display: flex;
+		flex-direction: column;
+		height: 2rem;
+		width: 2.3rem;
+		position: relative;
+		cursor: pointer;
+		transition: background 0.3s;
+		justify-content: center;
+		z-index: 9980;
+	}
+
+	.responsive-navigation__humburger span {
+		display: block;
+		background: var(--pinkColor);
+		height: .180rem;
+		transition: all 200ms ease-out;
+	}
+
+	.responsive-navigation__humburger span::before, .responsive-navigation__humburger span::after {
+		content: "";
+		display: block;
+		background: var(--pinkColor);
+		height: .180rem;
+		position: absolute;
+		width: 100%;
+		transition: all 300ms ease-out;
+	}
+
+	.responsive-navigation__humburger span::before {
+		margin-top: .6rem;
+	}
+
+	.responsive-navigation__humburger span::after {
+		margin-top: -.5rem;
+	}
+
+	.responsive-navigation__humburger.humburger-active span {
+		background: none;
+		transition-delay: 0s, 1s;
+	}
+
+	.responsive-navigation__humburger.humburger-active span::before {
+		transform: rotate(45deg);
+		margin: 0;
+		background: var(--blackColor);
+		height: .140rem;
+	}
+
+	.responsive-navigation__humburger.humburger-active span::after {
+		transform: rotate(-45deg);
+		margin: 0;
+		background: var(--blackColor);
+		height: .140rem;
+	}
+
+	.responsive-navigation__humburger.humburger-active span::before, .responsive-navigation__humburger.humburger-active span::after {
+		transition-delay: 0s, 0.1s;
+	}
+
+}
+
+/***** Футтер *****/
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--grayColor-v1);
+	padding: 3.5em 4em;
+}
+
+.footer-block {
+	width: calc((100% / 3));
+}
+
+.footer__left-block div span {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.footer__middle-block div {
+	margin-bottom: 1em;
+}
+
+.footer__middle-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.footer__middle-block a {
+	transition: all 150ms ease-out;
+}
+
+.footer__middle-block svg {
+	width: 1.2rem;
+	vertical-align: middle;
+	fill: var(--pinkColor);
+}
+
+.footer__middle-block a:hover {
+	color: var(--pinkColor);
+}
+
+.footer__right-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.footer__right-block > div {
+	margin-bottom: 1em;
+}
+
+@media screen and (max-width:767px) {
+	.footer-block {
+		width: 50%;
+		margin-bottom: 2.5em;
+	}
+
+	.footer__right-block {
+		align-items: flex-start;
+	}
+
+}
+
+@media screen and (max-width:540px) {
+	.footer-block {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,180 @@
+/****** Подключение шрифтов ******/
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratSemiBold';
+    src: url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratExtraBold';
+    src: url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/***** Заголовки *****/
+h1, h2, h3, h4, h5, h6 {
+   /** line-height: 1.35em;**/
+}
+
+h1, h2, h4 {
+    font-family: 'MontserratExtraBold';
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: 'MontserratSemiBold';
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-family: 'MontserratBold';
+    font-size: 1.5rem;
+}
+
+
+/* Оформление заголовка */
+
+.hLine {
+    padding-left: 1em;
+    position: relative;
+}
+
+.hLine:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--blackColor);
+    box-sizing: border-box;
+    width: .2em;
+    height: 100%;
+    left: 0;
+}
+
+/***** Под содержание *****/
+
+/* Параграфы */
+
+.p-style {
+    font-family: 'MontserratRegular';
+    line-height: 1.75em;    
+    margin: 0
+}
+
+
+/* На случай, если не удасться 
+присвоить класс параграфу в Yii 
+размер по умолчанию 16px*/
+p {
+    font-family: 'MontserratRegular';
+    line-height: 1.75em;    
+    margin: 0
+}
+
+.p-v1 {
+    font-size: 1.125rem;
+}
+
+.p-v2 {
+    font-size: 1rem;
+}
+
+.p-v3 {
+    font-size: 0.875rem;
+}
+
+.p-v4 {
+    font-size: 0.813rem;
+}
+
+
+
+
+
+/* Списки */
+
+.list-content {
+    margin: 0;
+    padding: 0;
+}
+
+.list-content li {
+    list-style: none;
+    margin-bottom: 0.6em;
+}
+
+
+.list-togLine  li {
+    list-style: none;
+    position: relative;
+    padding-left: 1.4em;
+    margin-bottom: 0.6em;
+}
+
+.list-togLine li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 2.5px;
+    top: 0.80em;
+    height: 1px;
+    width: .6em;
+    background-color: var(--blackColor);
+}
+
+
+/* Метка */
+span.label {
+    font-family: 'MontserratRegular';
+    font-size: 0.875rem;
+    color: #FFF;
+}
+
+
+
+@media screen and (max-width: 440px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .list-count {
+        margin-bottom: 3.3em;
+    }
+
+    .list-count:last-child {
+        margin-bottom: 0;
+    }
+}
