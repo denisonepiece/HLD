@@ -287,8 +287,8 @@ body.modalActive {
 	}
 
 	.link-nav ul li a.link-nav__active::after {
-		display: none;
-	}
+		 display: none;
+	 }
 
 	.info-nav {
 		font-size: 1.4rem;
