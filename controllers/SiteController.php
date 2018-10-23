@@ -2,13 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\Contact;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+
 
 class SiteController extends Controller
 {
@@ -50,7 +49,7 @@ class SiteController extends Controller
     }
 
     public function actionIndex() {
-//        debug($_SERVER[REQUEST_URI]);
+
         return $this->render('index');
     }
 
@@ -70,13 +69,12 @@ class SiteController extends Controller
     }
 
     public function actionContact() {
+        $contact = Contact::findOne(['id' => 1]);
 
-        return $this->render('contact');
+        return $this->render('contact', [
+            'contact' => $contact,
+        ]);
     }
-
-
-
-
 
 
 }
