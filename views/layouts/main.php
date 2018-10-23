@@ -80,8 +80,6 @@ use yii\helpers\Html;
                         </div>';
                 }
                 ?>
-
-                <?php debug(Yii::$app->params['contact']) ?>
             </header>
             <?= $content ?>
         </div>
@@ -89,17 +87,15 @@ use yii\helpers\Html;
             <div class="footer p-style p-v3" itemscope itemtype="http://schema.org/Organization">
                 <div class="footer__left-block footer-block">
                     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">ул. Чорос-Гуркина, 39/8,</span><br/>
-                        <span>офис 203,</span>
-                        <span itemprop="addressLocality">Горно-Алтайск,</span>
-                        <span itemprop="postalCode">649000</span>
+                        <span itemprop="streetAddress"><?= $this->params['contact']['location'] ?></span><br/>
+                        <span itemprop="addressLocality"><?= $this->params['contact']['address'] ?></span>
                     </div>
-                    <span class="footer__tel" itemprop="telephone">+7 38822 2-04-3</span>
+                    <span class="footer__tel" itemprop="telephone"><?= $this->params['contact']['telephone'] ?></span>
                 </div>
                 <div class="footer__middle-block footer-block">
-                    <div itemprop="email">info@hld.agency</div>
+                    <div itemprop="email"><?= $this->params['contact']['email'] ?></div>
                     <div>
-                        <a href="#" target="_blank">
+                        <a href="<?= $this->params['contact']['instagram'] ?>" target="_blank">
                             instagram
                             <span>
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -114,7 +110,7 @@ use yii\helpers\Html;
                         </a>
                     </div>
                     <div>
-                        <a href="#" target="_blank">
+                        <a href="<?= $this->params['contact']['vk'] ?>" target="_blank">
                             vk
                             <span>
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 18">
