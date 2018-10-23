@@ -52,11 +52,11 @@ $config = [
                 '' => 'site/index',
                 'service' => 'site/service',
                 'case' => 'site/case',
-                'contact' => 'site/contact'
-
+                'contact' => 'site/contact',
             ],
-        ],
 
+
+        ],
     ],
     'params' => $params,
 ];

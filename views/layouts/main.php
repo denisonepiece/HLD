@@ -39,10 +39,10 @@ use yii\helpers\Html;
                                     <div class="link-nav">
                                         <ul>
                                             <!-- link-nav__active присваиваем к ссылке активному разделу -->
-                                            <li><a href="<?=Url::to(['/site/index/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/index') echo 'class = "link-nav__active"' ?>>Компания</a></li>
-                                            <li><a href="<?=Url::to(['/site/service/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
-                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
-                                            <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
+                                            <li><a href="<?=Url::to(['/site/index/']);?>" <?php if($_SERVER[REQUEST_URI] == '/') echo 'class = "link-nav__active"' ?>>Компания</a></li>
+                                            <li><a href="<?=Url::to(['/site/service/']);?>" <?php if($_SERVER[REQUEST_URI] == '/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
+                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
+                                            <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
                                         </ul>
                                     </div>
                                     <div class="info-nav">
