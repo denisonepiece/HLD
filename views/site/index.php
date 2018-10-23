@@ -190,7 +190,7 @@ IndexAsset::register($this);
                                         <div><span class="label">Разработка сайта</span></div>
                                     </div>
                                 </div>
-                                <div class="tiles-wrap__bg" style="background: url(img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                             </div>
                         </a>
                         <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
@@ -203,7 +203,7 @@ IndexAsset::register($this);
                                         <div><span class="label">Разработка сайта</span></div>
                                     </div>
                                 </div>
-                                <div class="tiles-wrap__bg" style="background: url(img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                             </div>
                         </a>
                         <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
@@ -216,7 +216,7 @@ IndexAsset::register($this);
                                         <div><span class="label">Разработка сайта</span></div>
                                     </div>
                                 </div>
-                                <div class="tiles-wrap__bg" style="background: url(img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                             </div>
                         </a>
                         <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
@@ -229,7 +229,7 @@ IndexAsset::register($this);
                                         <div><span class="label">Разработка сайта</span></div>
                                     </div>
                                 </div>
-                                <div class="tiles-wrap__bg" style="background: url(img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                             </div>
                         </a>
                     </div>

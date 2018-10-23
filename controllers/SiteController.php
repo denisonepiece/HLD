@@ -49,14 +49,29 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex()
-    {
+    public function actionIndex() {
+
         return $this->render('index');
+    }
+
+    public function actionService() {
+
+        return $this->render('service');
     }
 
     public function actionCase() {
 
         return $this->render('case');
+    }
+
+    public function actionProfile() {
+
+        return $this->render('profile');
+    }
+
+    public function actionContact() {
+
+        return $this->render('contact');
     }
 
 
