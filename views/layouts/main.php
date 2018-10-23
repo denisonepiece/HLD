@@ -80,6 +80,8 @@ use yii\helpers\Html;
                         </div>';
                 }
                 ?>
+
+                <?php debug(Yii::$app->params['contact']) ?>
             </header>
             <?= $content ?>
         </div>

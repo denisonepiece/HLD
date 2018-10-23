@@ -2,15 +2,21 @@
 
 namespace app\controllers;
 
-use app\models\Contact;
+
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use app\models\Contact;
+
 
 
 class SiteController extends Controller
 {
+
+    public function init(){
+        Yii::$app->view->params['contact'] = Contact::find()->one();
+    }
 
     public function behaviors()
     {
@@ -69,10 +75,10 @@ class SiteController extends Controller
     }
 
     public function actionContact() {
-        $contact = Contact::findOne(['id' => 1]);
+//        $contact = Contact::findOne(['id' => 1]);
 
         return $this->render('contact', [
-            'contact' => $contact,
+//            'contact' => $contact,
         ]);
     }
 
