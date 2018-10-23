@@ -5,7 +5,7 @@ use yii\helpers\Url;
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <html lang="ru">
+    <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta charset="UTF-8">
         <title>HLD agency</title>
@@ -37,10 +37,10 @@ use yii\helpers\Url;
                                     <div class="link-nav">
                                         <ul>
                                             <!-- link-nav__active присваиваем к ссылке активному разделу -->
-                                            <li><a href="<?=Url::to(['/site/index/']);?>">Компания</a></li>
-                                            <li><a href="<?=Url::to(['/site/service/']);?>">Услуги</a></li>
-                                            <li><a href="<?=Url::to(['/site/case/']);?>">Проекты</a></li>
-                                            <li><a href="<?=Url::to(['/site/contact/']);?>">Контакты</a></li>
+                                            <li><a href="<?=Url::to(['/site/index/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/index') echo 'class = "link-nav__active"' ?>>Компания</a></li>
+                                            <li><a href="<?=Url::to(['/site/service/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
+                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
+                                            <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/site/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
                                         </ul>
                                     </div>
                                     <div class="info-nav">
@@ -53,6 +53,32 @@ use yii\helpers\Url;
                         </div>
                     </div>
                 </nav>
+                <?php
+                if($_SERVER[REQUEST_URI] == '/site/index') {
+                       echo '<div class="parallax-elem">
+                            <div class="parallax-elem__inner">
+                                <div class="parallax-elem__artist a rellax" data-rellax-speed="-5.9"></div>
+                                <div class="parallax-elem__artist b rellax" data-rellax-speed="-3"></div>
+                                <div class="parallax-elem__artist c rellax" data-rellax-speed="1"></div>
+                                <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
+                                <div class="parallax-elem__artist e rellax" data-rellax-speed="-4"></div>
+                                <div class="parallax-elem__artist f rellax" data-rellax-speed="-2"></div>
+                                <div class="parallax-elem__artist g rellax" data-rellax-speed="-3"></div>
+                                <div class="parallax-elem__artist u rellax" data-rellax-speed="2"></div>
+                                <div class="parallax-elem__artist k rellax" data-rellax-speed="-4"></div>
+                                <div class="parallax-elem__artist l rellax" data-rellax-speed="-5"></div>
+                                <div class="parallax-elem__artist o rellax" data-rellax-speed="-3"></div>
+                                <div class="parallax-elem__artist p rellax" data-rellax-speed="-1"></div>
+                            </div>
+                        </div>
+                        <div class="intro">
+                            <div class="intro__header">
+                                <h1>Запуск и поддержка бизнеса в digital-среде</h1>
+                            </div>
+                        </div>';
+                }
+                ?>
+
             </header>
             <?= $content ?>
         </div>
