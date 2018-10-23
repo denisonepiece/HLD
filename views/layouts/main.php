@@ -1,15 +1,17 @@
 <?php
 
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
     <head>
-        <meta charset="UTF-8">
-        <title>HLD agency</title>
+        <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <?= Html::csrfMetaTags() ?>
+        <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
     <body>
@@ -78,7 +80,6 @@ use yii\helpers\Url;
                         </div>';
                 }
                 ?>
-
             </header>
             <?= $content ?>
         </div>

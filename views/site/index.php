@@ -1,9 +1,11 @@
 <?php
 
 use app\assets\IndexAsset;
+use yii\helpers\Url;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
 
+$this->title = 'HLD agency';
 IndexAsset::register($this);
 ?>
 
@@ -88,7 +90,7 @@ IndexAsset::register($this);
             </div>
             <div class="row">
                 <div class="col-md col-sm col-xs">
-                    <a href="#" class="link-btn one-link-btn">
+                    <a href="<?=Url::to(['/site/service/']); ?>" class="link-btn one-link-btn">
                         <span>Подробнее об услугах</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
                             <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
@@ -237,7 +239,7 @@ IndexAsset::register($this);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md col-sm col-xs">
-                    <a href="#" class="link-btn one-link-btn">
+                    <a href="<?=Url::to(['/site/case/']); ?>" class="link-btn one-link-btn">
                         <span>Смотреть все работы</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
                             <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>

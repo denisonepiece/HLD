@@ -2,6 +2,8 @@
 
 use app\assets\CaseAsset;
 
+$this->title = 'HLD cases';
+
 CaseAsset::register($this);
 ?>
 
