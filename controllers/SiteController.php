@@ -50,7 +50,7 @@ class SiteController extends Controller
     }
 
     public function actionIndex() {
-
+//        debug($_SERVER[REQUEST_URI]);
         return $this->render('index');
     }
 

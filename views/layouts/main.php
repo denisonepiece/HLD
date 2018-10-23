@@ -56,7 +56,7 @@ use yii\helpers\Html;
                     </div>
                 </nav>
                 <?php
-                if($_SERVER[REQUEST_URI] == '/site/index') {
+                if($_SERVER[REQUEST_URI] == '/') {
                        echo '<div class="parallax-elem">
                             <div class="parallax-elem__inner">
                                 <div class="parallax-elem__artist a rellax" data-rellax-speed="-5.9"></div>
