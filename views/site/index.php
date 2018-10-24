@@ -16,9 +16,7 @@ IndexAsset::register($this);
                 <div class="col-md-6 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">HLD - digital агенство</h2>
-                        <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
-                            <br/><br/>
-                            Любим работать над проектами корпоративного класса, электронной коммерции, а также не упускаем из виду интернет-сервисы и порталы.
+                        <p class="p-style p-v1"><?= $this->params['agency']['about'] ?>
                         </p>
                     </div>
                 </div>
@@ -31,7 +29,7 @@ IndexAsset::register($this);
                 <div class="col-md-6 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">Направления</h2>
-                        <p class="p-style p-v1 header-block__p tog-underCont">Разрабатываем, запускаем, сопровождаем и продвигаем всё то, что можно продвинуть, сопроводить и разработать</p>
+                        <p class="p-style p-v1 header-block__p tog-underCont"><?= $this->params['agency']['dir_about'] ?></p>
                     </div>
                 </div>
             </div>
@@ -41,18 +39,14 @@ IndexAsset::register($this);
                         <h5 class="heading">Веб-разработка</h5>
                     </div>
                     <ul class="list-content list-togLine">
+                        <?php
+                        $pieces = explode(',', $this->params['agency']['dir_web']);
+                        foreach($pieces as $piece) {
+                        ?>
                         <li>
-                            <p class="p-style p-v2">Аналитика</p>
+                            <p class="p-style p-v2"><?= $piece ?></p>
                         </li>
-                        <li>
-                            <p class="p-style p-v2">Прототипирование</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Дизайн интерфейса</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Front-end и back-end разработка</p>
-                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 list-count">
@@ -60,15 +54,14 @@ IndexAsset::register($this);
                         <h5 class="heading">Dизайн</h5>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li>
-                            <p class="p-style p-v2">Исследования</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Визуальная идентификация</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Полиграфический дизайн</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $this->params['agency']['dir_brand']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li>
+                                <p class="p-style p-v2"><?= $piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 list-count">
@@ -76,15 +69,14 @@ IndexAsset::register($this);
                         <h5 class="heading">Поддержка</h5>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li>
-                            <p class="p-style p-v2">SMM</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Контекстная реклама</p>
-                        </li>
-                        <li>
-                            <p class="p-style p-v2">Техническая поддежрка</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $this->params['agency']['dir_help']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li>
+                                <p class="p-style p-v2"><?= $piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -106,7 +98,7 @@ IndexAsset::register($this);
                 <div class="col-md-6 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">Наши работы</h2>
-                        <p class="p-style p-v1 header-block__p  tog-underCont">Каждый выполненный нами проект — это чья-то уникальная история, в написании которой нельзя работать по шаблону. Поэтому мы всегда находим новые и эффективные решения при разработке и запуске очередного сервиса.</p>
+                        <p class="p-style p-v1 header-block__p  tog-underCont"><?= $this->params['agency']['case_about'] ?></p>
                     </div>
                 </div>
             </div>
@@ -147,6 +139,27 @@ IndexAsset::register($this);
                                         <div class="slider-oneVers__top-block">
                                             <div class="slider-oneVers__header-desc">
                                                 <h4>Инжиниринговый центр Республики Алтай</h4>
+                                            </div>
+                                            <div class="slider-oneVers__text-desc">
+                                                <p class="p-style p-1">Первый и единственный портал о продукции Республики Алтай</p>
+                                            </div>
+                                            <div class="slider-oneVers__label-desc">
+                                                <span class="label">Разработка сайта</span>
+                                            </div>
+                                        </div>
+                                        <div class="slider-oneVers__bottom-block">
+                                            <a href="#" class="link-btn two-link-btn">
+                                                <span>Смотреть кейс</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
+                                                    <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="slider-oneVers__desc">
+                                        <div class="slider-oneVers__top-block">
+                                            <div class="slider-oneVers__header-desc">
+                                                <h4>Тортодельня</h4>
                                             </div>
                                             <div class="slider-oneVers__text-desc">
                                                 <p class="p-style p-1">Первый и единственный портал о продукции Республики Алтай</p>

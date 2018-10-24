@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 
+use app\models\Agency;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -16,6 +17,8 @@ class SiteController extends Controller
 
     public function init(){
         Yii::$app->view->params['contact'] = Contact::find()->asArray()->one();
+        Yii::$app->view->params['agency'] = Agency::find()->asArray()->one();
+
     }
 
     public function behaviors()

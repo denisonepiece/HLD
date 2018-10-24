@@ -75,7 +75,7 @@ use yii\helpers\Html;
                         </div>
                         <div class="intro">
                             <div class="intro__header">
-                                <h1>Запуск и поддержка бизнеса в digital-среде</h1>
+                                <h1>'.$this->params['agency']['intro'].'</h1>
                             </div>
                         </div>';
                 }
