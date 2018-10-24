@@ -16,9 +16,9 @@ class SiteController extends Controller
 {
 
     public function init(){
+
         Yii::$app->view->params['contact'] = Contact::find()->asArray()->one();
         Yii::$app->view->params['agency'] = Agency::find()->asArray()->one();
-
     }
 
     public function behaviors()
@@ -78,10 +78,12 @@ class SiteController extends Controller
     }
 
     public function actionContact() {
-//        $contact = Contact::findOne(['id' => 1]);
+        $contact = Contact::find()->asArray()->one();
+
+//        debug($contact);
 
         return $this->render('contact', [
-//            'contact' => $contact,
+            'contact' => $contact,
         ]);
     }
 
