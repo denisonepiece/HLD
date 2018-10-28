@@ -7,8 +7,12 @@
 
 /* Для первых секций на внутр.страницах сразу под меню (заголовки) */
 .start-sec {
-	padding-top: 9rem;
+	padding-top: 9.890rem;
 	padding-bottom: 0;
+}
+
+.start-sec.v2 {
+	padding-bottom: 6rem;
 }
 
 /* Относительные оступы вниз от заголовков */
@@ -16,7 +20,11 @@
 	margin-bottom: .9em;
 }
 
-/* Оступы вниз от отопис.параграфа в заголовке */
+.tog-underCont.v2 {
+	margin-bottom: 3.8em;
+}
+
+/* Оступы вниз от опис.параграфа в заголовке */
 .header-block__p.tog-underCont {
 	margin-bottom: 5rem;
 }

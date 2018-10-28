@@ -57,7 +57,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                '<action:(service|case|contact)>' => 'site/<action>',
+                '<action:(service|case|contact|view-case)>' => 'site/<action>',
                 'admin/' => 'admin/admin/index',
             ],
 

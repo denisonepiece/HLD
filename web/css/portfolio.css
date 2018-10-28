@@ -1,3 +1,5 @@
+/*** Плитка ***/
+
 .tiles-wrap {
 	display: flex;
 	flex-wrap: wrap;
@@ -109,4 +111,158 @@
 		padding-bottom: 70%;
 		margin: 0;
 	}
+}
+
+
+/*** Страница кейса ***/
+
+
+/** Шапка **/
+.case-intro {
+	color: var(--whiteColor);
+}
+
+.case-intro__client-info-left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.case-intro__client-info-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.case-intro__block-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 40%;
+}
+
+.case-intro__client-info-right >
+.case-intro__block-inner {
+	width: 80%;
+}
+
+.case-intro__logo {
+	height: 9rem;
+	width: 9rem;
+	margin-bottom: 1.5em;
+	background-repeat: no-repeat; 
+	background-position: center center;
+	background-size: contain;
+}
+
+.case-intro__desc-block {
+	display: flex;
+	margin-bottom: 3rem;
+}
+
+.case-intro__desc-block:last-child {
+	margin-bottom: 0;
+}
+
+.case-intro__desc-block > .desc-header {
+	margin-right: 3rem;
+}
+
+.case-intro__desc-block > .desc-text > div {
+	margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+	.case-intro__block-inner {
+		width: 100%;
+	}
+
+	.case-intro__client-info-right >
+	.case-intro__block-inner {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.case-intro__client-info-left {
+		margin-bottom: 3rem;
+	}
+}
+
+
+/** Содержание **/
+
+.case-fifty {
+	display: flex;
+	background-color: #f2f2f2;
+	flex-wrap: wrap;
+}
+
+.case-fifty.reverse {
+	flex-direction: row-reverse;
+}
+
+.case-fifty div {
+	width: calc((100% / 2));
+}
+
+.case-fifty__text {
+	padding-left: 5rem;
+	padding-right: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.case-fifty__img {
+	min-height: 30rem;
+	flex: 1 0 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.case-img-v1 img{
+	width: 100%;
+	display: block;
+}
+
+.case-img-v2 div{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	padding-bottom: 47%; 
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.case-fifty {
+		background: none;
+	}
+
+	.case-fifty + .case-fifty {
+		margin-top: 5rem;
+	}
+
+	.case-fifty div {
+		width: 100%;
+	}
+
+	.case-fifty__text {
+		padding-left: 2rem;
+		padding-right: 0;
+		margin-bottom: 3.5rem;
+	}
+
+	.case-fifty__img {
+		flex: auto; 
+	}
+
+	.case-img-v2 div{
+		padding-bottom: 65%; 
+	}	
 }

@@ -58,6 +58,11 @@ h5 {
     font-size: 1.5rem;
 }
 
+h6 {
+    font-family: 'MontserratBold';
+    font-size: 1.2rem;
+}
+
 .hGray-v2 {
     color: var(--grayColor-v2);
 }
@@ -153,10 +158,9 @@ p {
 
 
 /* Метка */
-span.label {
+.label {
     font-family: 'MontserratRegular';
     font-size: 0.875rem;
-    color: #FFF;
 }
 
 
