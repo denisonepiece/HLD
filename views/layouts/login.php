@@ -37,18 +37,6 @@ AdminAsset::register($this);
                                         <div class="logo__text-elements"></div>
                                     </a>
                                 </div>
-                                <div class="navigation-right">
-                                    <div class="link-nav">
-                                        <ul>
-                                            <!-- link-nav__active присваиваем к ссылке активному разделу -->
-                                            <li><a href="<?=Url::to(['/admin/admin/index']);?>" <?php if($_SERVER[REQUEST_URI] == '/') echo 'class = "link-nav__active"' ?>>Компания</a></li>
-                                            <li><a href="<?=Url::to(['/admin//']);?>" <?php if($_SERVER[REQUEST_URI] == '/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
-                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
-                                            <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
-                                            <li><a href="<?=Url::to(['/login/logout/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Выход</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -18,16 +18,9 @@ class AppAdminController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['login', 'logout'],
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['login'],
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'allow' => true,
-                        'actions' => ['logout'],
                         'roles' => ['@'],
                     ],
                 ],
