@@ -8,6 +8,12 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
+        ]
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -23,7 +29,8 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
+            'loginUrl' => 'login/'
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -50,9 +57,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                'service' => 'site/service',
-                'case' => 'site/case',
-                'contact' => 'site/contact',
+                '<action:(service|case|contact)>' => 'site/<action>',
+                'admin/' => 'admin/admin/index',
             ],
 
 
