@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 28 2018 г., 09:14
--- Версия сервера: 5.6.38
--- Версия PHP: 7.0.26
+-- Время создания: Окт 28 2018 г., 22:54
+-- Версия сервера: 5.5.58
+-- Версия PHP: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -73,6 +73,30 @@ INSERT INTO `contact` (`id`, `location`, `address`, `telephone`, `email`, `insta
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `profile`
+--
+
+CREATE TABLE `profile` (
+  `id` int(11) NOT NULL,
+  `article` varchar(255) NOT NULL,
+  `logo` varchar(255) NOT NULL,
+  `task` varchar(255) NOT NULL,
+  `type_service_id` int(11) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `view_case_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `profile`
+--
+
+INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`) VALUES
+(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 1, 'tortodelna.ru', 'tort.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `user`
 --
 
@@ -81,6 +105,33 @@ CREATE TABLE `user` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `auth_key` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `auth_key`) VALUES
+(1, 'father', '$2y$13$F6xTDToSA0vrDF.TvXkrKul9lVlZCYORUau92D14WOthuWspfrRgm', 'jBqtJxvc0fMH5o5cpOuwc6N3CyRoBItd');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `view_case`
+--
+
+CREATE TABLE `view_case` (
+  `id` int(11) NOT NULL,
+  `one` text NOT NULL,
+  `two` text NOT NULL,
+  `three` text NOT NULL,
+  `four` text NOT NULL,
+  `five` text NOT NULL,
+  `six` text NOT NULL,
+  `seven` text NOT NULL,
+  `eight` text NOT NULL,
+  `nine` text NOT NULL,
+  `ten` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -100,9 +151,21 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `profile`
+--
+ALTER TABLE `profile`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `user`
 --
 ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `view_case`
+--
+ALTER TABLE `view_case`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -122,10 +185,22 @@ ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT для таблицы `profile`
+--
+ALTER TABLE `profile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `view_case`
+--
+ALTER TABLE `view_case`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
