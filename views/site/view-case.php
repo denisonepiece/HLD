@@ -13,10 +13,10 @@ ViewCaseAsset::register($this);
                 <div class="col-md-5 col-sm-4 col-xs-12">
                     <div class="case-intro__client-info-left">
                         <div class="case-intro__block-inner">
-                            <div class="case-intro__logo" style="background-image: url(/img/content/portfolio/IxjTJHCcFxM.jpg);">
+                            <div class="case-intro__logo" style="background-image: url(/img/content/portfolio/<?=$case['logo']?>);">
                             </div>
                             <div class="case-intro__label">
-                                <span class="label">Запуск бренда</span>
+                                <span class="label"><?=$case['type_service_id'] ?></span>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ ViewCaseAsset::register($this);
                                     <h5>Клиент</h5>
                                 </div>
                                 <div class="desc-text">
-                                    <p class="p-style p-v1">Кондитерская «Тортодельня», занимающаяся приготовлением домашних тортов и кексов.</p>
+                                    <p class="p-style p-v1"><?=$case['article'] ?></p>
                                 </div>
                             </div>
                             <div class="case-intro__desc-block">
@@ -38,9 +38,9 @@ ViewCaseAsset::register($this);
                                 </div>
                                 <div class="desc-text">
                                     <div>
-                                        <p class="p-style p-v1">Разработать фирменный стиль и сайт-конструктор компании</p>
+                                        <p class="p-style p-v1"><?=$case['task'] ?></p>
                                     </div>
-                                    <a class="stock-link" href="#">mylink.com</a>
+                                    <a class="stock-link" href="http://<?=$case['link'] ?>"><?=$case['link'] ?></a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ ViewCaseAsset::register($this);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
-                    <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
+                    <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. ghdfghfghjfgjghjghjghfjghjfgghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
                     </p>
                 </div>
             </div>

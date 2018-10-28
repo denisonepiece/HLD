@@ -20,6 +20,7 @@ a.stock-link:hover {
 	display: inline-flex;
 	align-items: center;
 	transition: all 250ms ease-out;
+	cursor: pointer;
 }
 
 .link-btn:active {

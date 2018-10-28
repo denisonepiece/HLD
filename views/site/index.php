@@ -44,7 +44,7 @@ IndexAsset::register($this);
                         foreach($pieces as $piece) {
                         ?>
                         <li>
-                            <p class="p-style p-v2"><?= $piece ?></p>
+                            <p class="p-v2"><?= $piece ?></p>
                         </li>
                         <?php } ?>
                     </ul>
@@ -59,7 +59,7 @@ IndexAsset::register($this);
                         foreach($pieces as $piece) {
                             ?>
                             <li>
-                                <p class="p-style p-v2"><?= $piece ?></p>
+                                <p class="p-v2"><?= $piece ?></p>
                             </li>
                         <?php } ?>
                     </ul>
@@ -74,7 +74,7 @@ IndexAsset::register($this);
                         foreach($pieces as $piece) {
                             ?>
                             <li>
-                                <p class="p-style p-v2"><?= $piece ?></p>
+                                <p class="p-v2"><?= $piece ?></p>
                             </li>
                         <?php } ?>
                     </ul>

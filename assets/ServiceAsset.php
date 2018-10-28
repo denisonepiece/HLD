@@ -14,6 +14,7 @@ class ServiceAsset extends AssetBundle
         'css/typography.css',
         'css/button.css',
         'css/blocks.css',
+        'css/modal.css',
         'libs/base/css/flexboxgrid.css',
         'libs/base/css/normalize.css',
     ];
@@ -21,6 +22,7 @@ class ServiceAsset extends AssetBundle
         'libs/base/js/jquery-3.3.1.min.js',
         'js/menu.js',
         'libs/smooth-scroll.min.js',
+        'js/modal.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

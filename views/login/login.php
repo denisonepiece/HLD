@@ -33,13 +33,13 @@ $this->title = 'Login';
                     </div>
                     <div class="checkbox-custom-v1">
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="LoginForm[rememberMe]" id="checkbox-button-opt-one" class="hide-checkbox" value="1" checked>
+                            <input type="checkbox" name="LoginForm[rememberMe]" id="checkbox-button-opt-one" class="hide-checkbox" >
                             <label for="checkbox-button-opt-one">Запомнить</label>
                         </div>
                     </div>
                     <br>
                     <div class="form-group">
-                        <?= Html::submitButton('Войти', ['class' => 'block-btn one-block-btn', 'name' => 'login-button', 'style' => 'border: 0px;']) ?>
+                        <?= Html::submitButton('Войти', ['class' => 'block-btn one-block-btn', 'style' => 'border: 0px;']) ?>
                     </div>
                 </form>
             </div>

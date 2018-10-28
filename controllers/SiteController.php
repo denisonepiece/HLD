@@ -6,6 +6,7 @@ use app\models\Agency;
 use Yii;
 use yii\web\Controller;
 use app\models\Contact;
+use app\models\Profile;
 
 
 class SiteController extends Controller
@@ -41,13 +42,21 @@ class SiteController extends Controller
     }
 
     public function actionCase() {
+        $profile = Profile::find()->asArray()->indexBy('id')->all();
 
-        return $this->render('case');
+        return $this->render('case', [
+            'profile' => $profile,
+        ]);
     }
 
-    public function actionViewCase() {
+    public function actionViewCase($id) {
+        $case = Profile::findOne([
+            'id' => $id,
+        ]);
 
-        return $this->render('view-case');
+        return $this->render('view-case', [
+            'case' => $case,
+        ]);
     }
 
     public function actionContact() {

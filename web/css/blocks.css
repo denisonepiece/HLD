@@ -2,7 +2,14 @@
 /* Секции 1 */
 .section-v1 {
 	padding: 6rem 0;
+}
 
+.section-v1_1 {
+	margin-bottom: 4rem;
+}
+
+.section-v1_1:last-child {
+	margin-bottom: 0;
 }
 
 /* Для первых секций на внутр.страницах сразу под меню (заголовки) */
@@ -17,11 +24,15 @@
 
 /* Относительные оступы вниз от заголовков */
 .header-block.tog-underCont > .heading {
-	margin-bottom: .9em;
+	margin-bottom: 1em;
 }
 
-.tog-underCont.v2 {
-	margin-bottom: 3.8em;
+.header-block.tog-underCont.v1 > .heading{
+	margin-bottom: 1.3em;
+}
+
+.header-block.tog-underCont.v2 > .heading{
+	margin-bottom: 2em;
 }
 
 /* Оступы вниз от опис.параграфа в заголовке */
@@ -32,6 +43,14 @@
 /* Оступы вниз от контента сеции */
 .section__inner-content.tog-underElements {
 	margin-bottom: 3rem;
+}
+
+.section__inner-content.tog-underElements.v2 {
+	margin-bottom: 2rem;
+}
+
+.section__inner-content.tog-underElements.v3 {
+	margin-bottom: 2.6rem;
 }
 
 @media screen and (max-width: 767px) {

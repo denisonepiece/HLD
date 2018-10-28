@@ -45,7 +45,7 @@ AdminAsset::register($this);
                                             <li><a href="<?=Url::to(['/admin//']);?>" <?php if($_SERVER[REQUEST_URI] == '/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
                                             <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
                                             <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
-                                            <li><a href="<?=Url::to(['/login/logout/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Выход</a></li>
+                                            <li><a href="<?=Url::to(['/login/logout/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Выход(<?=Yii::$app->user->identity->username ?>)</a></li>
                                         </ul>
                                     </div>
                                 </div>
