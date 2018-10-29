@@ -83,6 +83,8 @@ use yii\helpers\Html;
             </header>
             <?= $content ?>
         </div>
+        <?php if($_SERVER[REQUEST_URI] == '/contact') { ?>
+        <?php } else { ?>
         <footer>
             <div class="footer p-style p-v3" itemscope itemtype="http://schema.org/Organization">
                 <div class="footer__left-block footer-block">
@@ -131,6 +133,7 @@ use yii\helpers\Html;
                 </div>
             </div>
         </footer>
+        <?php } ?>
     </div>
     <?php $this->endBody() ?>
     </body>
