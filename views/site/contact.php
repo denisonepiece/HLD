@@ -75,7 +75,7 @@ ContactAsset::register($this);
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <a href="#" class="block-btn one-block-btn">Отправить заявку</a>
+                    <a href="<?=\yii\helpers\Url::to(['site/brif']) ?>" class="block-btn one-block-btn">Отправить заявку</a>
                 </div>
             </div>
         </div>

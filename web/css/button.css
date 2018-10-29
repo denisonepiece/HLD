@@ -117,7 +117,8 @@ a.stock-link:hover {
 	outline: none;
 	-moz-user-select: none;
 	-khtml-user-select: none;
-	user-select: none
+	user-select: none;
+	white-space: nowrap; 
 }
 
 .hide-checkbox + label:active {
@@ -130,10 +131,12 @@ a.stock-link:hover {
 /* Индивидуальная обертка */
 .checkbox-custom-v1 {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .checkbox-custom-v1__position {
 	margin-right: 1em;
+	margin-bottom: 1rem;
 }
 
 .checkbox-custom-v1__position:last-child{
@@ -142,15 +145,25 @@ a.stock-link:hover {
 
 /* 1 версия элементов*/
 .checkbox-custom-v1__position .hide-checkbox + label{
-	background-color: var(--pinkColor);
-	color: var(--whiteColor);
+	background-color: var(--grayColor-v2);
+	color: var(--grayColor-v4);
 	font-family: 'MontserratRegular';
 	font-size: 0.875rem;
 	padding: 0.625em 0.813em
 }
 
 .checkbox-custom-v1__position .hide-checkbox:checked + label {
-	background-color: var(--grayColor-v2);
-	color: var(--grayColor-v4);
+	background-color: var(--pinkColor);
+	color: var(--whiteColor);
 }
 
+@media screen and (max-width: 767px) {
+	.checkbox-custom-v1__position {
+		margin-bottom: 1rem;
+	}
+
+	.checkbox-custom-v1__position:last-child{
+		margin-bottom: 0;
+	}
+
+}

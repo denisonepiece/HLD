@@ -86,4 +86,9 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionBrif() {
+
+        return $this->render('brif');
+    }
+
 }

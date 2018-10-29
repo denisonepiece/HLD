@@ -1,10 +1,14 @@
 .form-container {
-  padding-top: 1.3em
+ /** padding-top: 1.3em**/
 }
 
 .form-group {
   position: relative;
   margin-bottom: 2.5em
+}
+
+.form-group.none-mrg {
+  margin-bottom: 0;
 }
 
 .form-group input, .form-group textarea {
@@ -23,7 +27,7 @@
   box-sizing: border-box;
   display: block;
   overflow: hidden;
-
+  padding-bottom: .2em;
 }
 
 .form-group input:focus {
@@ -36,7 +40,8 @@
 }
 
 .form-group input:focus::-webkit-input-placeholder {
-  color: var(--grayColor-v3)
+  color: var(--grayColor-v3);
+  font-size: .8em;
 }
 
 .form-group textarea:focus {
