@@ -114,20 +114,21 @@ IndexAsset::register($this);
                             </div>
                             <div class="slider-oneVers__right-block">
                                 <div class="slider-oneVers__content-slides">
+                                    <?php foreach ($profile as $profile): ?>
                                     <div class="slider-oneVers__desc">
                                         <div class="slider-oneVers__top-block">
                                             <div class="slider-oneVers__header-desc">
-                                                <h4>Тортодельня</h4>
+                                                <h4><?=$profile['article'] ?></h4>
                                             </div>
                                             <div class="slider-oneVers__text-desc">
-                                                <p class="p-style p-1">Первый и единственный портал о продукции Республики Алтай</p>
+                                                <p class="p-style p-1"><?=$profile['description'] ?></p>
                                             </div>
                                             <div class="slider-oneVers__label-desc">
-                                                <span class="label">Разработка сайта</span>
+                                                <span class="label"><?=$type[$profile['type_service_id']]['type'] ?></span>
                                             </div>
                                         </div>
                                         <div class="slider-oneVers__bottom-block">
-                                            <a href="#" class="link-btn two-link-btn">
+                                            <a href="<?=\yii\helpers\Url::to(['site/view-case', 'id' => $profile['id']]) ?>" class="link-btn two-link-btn">
                                                 <span>Смотреть кейс</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
                                                     <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
@@ -135,48 +136,7 @@ IndexAsset::register($this);
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="slider-oneVers__desc">
-                                        <div class="slider-oneVers__top-block">
-                                            <div class="slider-oneVers__header-desc">
-                                                <h4>Инжиниринговый центр Республики Алтай</h4>
-                                            </div>
-                                            <div class="slider-oneVers__text-desc">
-                                                <p class="p-style p-1">Первый и единственный портал о продукции Республики Алтай</p>
-                                            </div>
-                                            <div class="slider-oneVers__label-desc">
-                                                <span class="label">Разработка сайта</span>
-                                            </div>
-                                        </div>
-                                        <div class="slider-oneVers__bottom-block">
-                                            <a href="#" class="link-btn two-link-btn">
-                                                <span>Смотреть кейс</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
-                                                    <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="slider-oneVers__desc">
-                                        <div class="slider-oneVers__top-block">
-                                            <div class="slider-oneVers__header-desc">
-                                                <h4>Тортодельня</h4>
-                                            </div>
-                                            <div class="slider-oneVers__text-desc">
-                                                <p class="p-style p-1">Первый и единственный портал о продукции Республики Алтай</p>
-                                            </div>
-                                            <div class="slider-oneVers__label-desc">
-                                                <span class="label">Разработка сайта</span>
-                                            </div>
-                                        </div>
-                                        <div class="slider-oneVers__bottom-block">
-                                            <a href="#" class="link-btn two-link-btn">
-                                                <span>Смотреть кейс</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
-                                                    <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <div class="slider-progress">
                                     <div class="progress"></div>

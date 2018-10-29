@@ -7,19 +7,18 @@ use Yii;
 use yii\web\Controller;
 use app\models\Contact;
 use app\models\Profile;
+use app\models\TypeService;
 
 
 class SiteController extends Controller
 {
 
-    public function init(){
-
+    public function init() {
         Yii::$app->view->params['contact'] = Contact::find()->asArray()->one();
         Yii::$app->view->params['agency'] = Agency::find()->asArray()->one();
     }
 
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -32,8 +31,16 @@ class SiteController extends Controller
     }
 
     public function actionIndex() {
+        $profile = Profile::find()->asArray()->where([
+            'on_index' => 'y'
+        ])->all();
 
-        return $this->render('index');
+        $type = TypeService::find()->indexBy('id')->asArray()->all();
+
+        return $this->render('index', [
+            'profile' => $profile,
+            'type' => $type,
+        ]);
     }
 
     public function actionService() {
