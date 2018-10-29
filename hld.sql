@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 29 2018 г., 10:52
+-- Время создания: Окт 29 2018 г., 16:28
 -- Версия сервера: 5.6.38
 -- Версия PHP: 7.0.26
 
@@ -154,8 +154,25 @@ CREATE TABLE `view_case` (
   `seven` text NOT NULL,
   `eight` text NOT NULL,
   `nine` text NOT NULL,
-  `ten` text NOT NULL
+  `ten` text NOT NULL,
+  `eleven` text NOT NULL,
+  `twelve` text NOT NULL,
+  `thirteen` text NOT NULL,
+  `fourteen` text NOT NULL,
+  `fifteen` text NOT NULL,
+  `sixteen` text NOT NULL,
+  `seventeen` text NOT NULL,
+  `eighteen` text NOT NULL,
+  `nineteen` text NOT NULL,
+  `twenty` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `view_case`
+--
+
+INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`) VALUES
+(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Индексы сохранённых таблиц
@@ -235,7 +252,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `view_case`
 --
 ALTER TABLE `view_case`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
