@@ -108,8 +108,9 @@ IndexAsset::register($this);
                         <div class="slider-oneVers__inner">
                             <div class="slider-oneVers__left-block">
                                 <div class="slider-oneVers__img-slides">
-                                    <div class="slider-oneVers__slide" style="background: url(/img/content/portfolio/1.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
-                                    <div class="slider-oneVers__slide" style="background: url(/img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                    <?php foreach ($profile as $img): ?>
+                                    <div class="slider-oneVers__slide" style="background: url(/img/content/portfolio/<?=$img['image'] ?>); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                             <div class="slider-oneVers__right-block">
