@@ -68,6 +68,10 @@ h6 {
     color: var(--grayColor-v2);
 }
 
+.grayC-v4 {
+    color: var(--grayColor-v4);
+}
+
 /* Оформление заголовка */
 .hLine {
     padding-left: 1em;
@@ -118,6 +122,16 @@ p {
 
 .p-v4 {
     font-size: 0.813rem;
+}
+
+.p-v5 {
+    font-size: 1.5rem;
+    font-family: 'MontserratBold';    
+}
+
+.p-v6 {
+    font-size: 2.2rem;
+    font-family: 'MontserratBold';  
 }
 
 /* Списки */

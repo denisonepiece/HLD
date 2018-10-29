@@ -14,7 +14,7 @@ use yii\helpers\Html;
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body>
+    <body <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'style = "overflow-y: scroll;"' ?> >
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <div class="wrapper-content">
@@ -38,10 +38,17 @@ use yii\helpers\Html;
                                 <div class="navigation-right">
                                     <div class="link-nav">
                                         <ul>
-                                            <!-- link-nav__active присваиваем к ссылке активному разделу -->
+                                            <?php
+                                            $flag = false;
+
+                                            if(strpos($_SERVER[REQUEST_URI], '/view-case') !== false) {
+                                                    $flag = true;
+                                            }
+                                            ?>
+
                                             <li><a href="<?=Url::to(['/site/index/']);?>" <?php if($_SERVER[REQUEST_URI] == '/') echo 'class = "link-nav__active"' ?>>Компания</a></li>
                                             <li><a href="<?=Url::to(['/site/service/']);?>" <?php if($_SERVER[REQUEST_URI] == '/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
-                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if($_SERVER[REQUEST_URI] == '/case') echo 'class = "link-nav__active"' ?>>Проекты</a></li>
+                                            <li><a href="<?=Url::to(['/site/case/']);?>" <?php if(($_SERVER[REQUEST_URI] == '/case')|| $flag ) echo 'class = "link-nav__active"' ?>>Проекты</a></li>
                                             <li><a href="<?=Url::to(['/site/contact/']);?>" <?php if($_SERVER[REQUEST_URI] == '/contact') echo 'class = "link-nav__active"' ?>>Контакты</a></li>
                                         </ul>
                                     </div>

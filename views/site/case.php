@@ -39,7 +39,7 @@ CaseAsset::register($this);
                                         <div>
                                             <h5><?= $profile['article'] ?></h5>
                                         </div>
-                                        <div><span class="label"><?= $profile['type_service_id'] ?></span></div>
+                                        <div><span class="label"><?= $type[$profile['type_service_id']]['type'] ?></span></div>
                                     </div>
                                 </div>
                                 <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/<?=$profile['image'] ?>); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>

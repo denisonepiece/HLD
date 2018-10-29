@@ -396,12 +396,17 @@ body.modalActive {
 
 }
 
+
 /***** Футтер *****/
 .footer {
 	display: flex;
 	flex-wrap: wrap;
 	background-color: var(--grayColor-v1);
 	padding: 3.5em 4em;
+}
+
+.footer.nobg {
+	background-color: transparent;
 }
 
 .footer-block {

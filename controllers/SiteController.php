@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Agency;
+use app\models\ViewCase;
 use Yii;
 use yii\web\Controller;
 use app\models\Contact;
@@ -50,9 +51,12 @@ class SiteController extends Controller
 
     public function actionCase() {
         $profile = Profile::find()->asArray()->indexBy('id')->all();
+        $type = TypeService::find()->indexBy('id')->asArray()->all();
+
 
         return $this->render('case', [
             'profile' => $profile,
+            'type' => $type,
         ]);
     }
 
@@ -60,9 +64,16 @@ class SiteController extends Controller
         $case = Profile::findOne([
             'id' => $id,
         ]);
+        $type = TypeService::find()->indexBy('id')->asArray()->all();
+        $view = ViewCase::findOne([
+            'id' => $id,
+        ]);
 
+//        debug($view);
         return $this->render('view-case', [
             'case' => $case,
+            'type' => $type,
+            'view' => $view,
         ]);
     }
 

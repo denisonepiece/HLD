@@ -1,9 +1,10 @@
 
-/* Секции 1 */
+/* Секции */
 .section-v1 {
 	padding: 6rem 0;
 }
 
+/* Секция только с нижним отступом */
 .section-v1_1 {
 	margin-bottom: 4rem;
 }
@@ -14,13 +15,18 @@
 
 /* Для первых секций на внутр.страницах сразу под меню (заголовки) */
 .start-sec {
-	padding-top: 9.890rem;
+	padding-top: 8.5rem;
 	padding-bottom: 0;
 }
 
 .start-sec.v2 {
 	padding-bottom: 6rem;
 }
+
+.start-sec.v3 {
+	padding-bottom: 4.5rem;
+}
+
 
 /* Относительные оступы вниз от заголовков */
 .header-block.tog-underCont > .heading {
@@ -33,6 +39,10 @@
 
 .header-block.tog-underCont.v2 > .heading{
 	margin-bottom: 2em;
+}
+
+.header-block.tog-underCont.v0 > .heading{
+	margin-bottom: .3em;
 }
 
 /* Оступы вниз от опис.параграфа в заголовке */
@@ -51,6 +61,10 @@
 
 .section__inner-content.tog-underElements.v3 {
 	margin-bottom: 2.6rem;
+}
+
+.section__inner-content.tog-underElements.v4 {
+	margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 767px) {
