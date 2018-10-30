@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 30 2018 г., 09:44
--- Версия сервера: 5.5.58
--- Версия PHP: 7.1.12
+-- Время создания: Окт 30 2018 г., 16:19
+-- Версия сервера: 5.6.38
+-- Версия PHP: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,6 +45,33 @@ CREATE TABLE `agency` (
 
 INSERT INTO `agency` (`id`, `intro`, `about`, `dir_about`, `dir_web`, `dir_brand`, `dir_help`, `case_about`) VALUES
 (1, 'Запуск и поддержка бизнеса в digital-среде', 'Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n<br><br>\r\nЛюбим работать над проектами корпоративного класса, электронной коммерции, а также не упускаем из виду интернет-сервисы и порталы.', 'Разрабатываем, запускаем, сопровождаем и продвигаем всё то, что можно продвинуть, сопроводить и разработать', 'Аналитика,Прототипирование,Дизайн интерфейса,Front-end и back-end разработка', 'Исследования,Визуальная идентификация,Полигирафический дизайн', 'SMM,Контекстная реклама,Техническая поддержка', 'Каждый выполненный нами проект — это чья-то уникальная история, в написании которой нельзя работать по шаблону. Поэтому мы всегда находим новые и эффективные решения при разработке и запуске очередного сервиса.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `brif`
+--
+
+CREATE TABLE `brif` (
+  `id` int(11) NOT NULL,
+  `site` tinyint(1) NOT NULL,
+  `design` tinyint(1) NOT NULL,
+  `smm` tinyint(1) NOT NULL,
+  `ads` tinyint(1) NOT NULL,
+  `tech_sup` tinyint(1) NOT NULL,
+  `about` text NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `telephone` varchar(20) NOT NULL,
+  `company` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `brif`
+--
+
+INSERT INTO `brif` (`id`, `site`, `design`, `smm`, `ads`, `tech_sup`, `about`, `name`, `telephone`, `company`, `email`) VALUES
+(1, 1, 1, 1, 1, 1, 'gfdgdgg', 'gfdgd', 'gfdgd', 'gfdgfd', 'gfdgdgd');
 
 -- --------------------------------------------------------
 
@@ -185,6 +212,12 @@ ALTER TABLE `agency`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `brif`
+--
+ALTER TABLE `brif`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `contact`
 --
 ALTER TABLE `contact`
@@ -222,6 +255,12 @@ ALTER TABLE `view_case`
 -- AUTO_INCREMENT для таблицы `agency`
 --
 ALTER TABLE `agency`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `brif`
+--
+ALTER TABLE `brif`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
