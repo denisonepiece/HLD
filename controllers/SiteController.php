@@ -40,11 +40,17 @@ class SiteController extends Controller
             'on_index' => 'y'
         ])->all();
 
+        $blocks = Profile::find()->asArray()->where([
+            'on_index' => 'y'
+        ])->all();
+
+
         $type = TypeService::find()->indexBy('id')->asArray()->all();
 
         return $this->render('index', [
             'profile' => $profile,
             'type' => $type,
+            'blocks' => $blocks,
         ]);
     }
 

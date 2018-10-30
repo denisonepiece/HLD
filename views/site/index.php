@@ -143,6 +143,7 @@ IndexAsset::register($this);
                                     <div class="progress"></div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -154,58 +155,21 @@ IndexAsset::register($this);
             <div class="row">
                 <div class="col-md col-sm col-xs">
                     <div class="tiles-wrap section__inner-content tog-underElements">
+                        <?php foreach ($blocks as $block): ?>
                         <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
                             <div class="tiles-wrap__tile-inner">
                                 <div class="tile-inner__overlay">
                                     <div class="tile-content">
                                         <div>
-                                            <h5>Хан Алтай</h5>
+                                            <h5><?=$block['article'] ?></h5>
                                         </div>
-                                        <div><span class="label">Разработка сайта</span></div>
+                                        <div><span class="label"> <?=$type[$block['type_service_id']]['type'] ?></span></div>
                                     </div>
                                 </div>
-                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/<?=$block['image'] ?>); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                             </div>
                         </a>
-                        <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
-                            <div class="tiles-wrap__tile-inner">
-                                <div class="tile-inner__overlay">
-                                    <div class="tile-content">
-                                        <div>
-                                            <h5>Тортодельня</h5>
-                                        </div>
-                                        <div><span class="label">Разработка сайта</span></div>
-                                    </div>
-                                </div>
-                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
-                            </div>
-                        </a>
-                        <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
-                            <div class="tiles-wrap__tile-inner">
-                                <div class="tile-inner__overlay">
-                                    <div class="tile-content">
-                                        <div>
-                                            <h5>Решиональный центр инжиниринга</h5>
-                                        </div>
-                                        <div><span class="label">Разработка сайта</span></div>
-                                    </div>
-                                </div>
-                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
-                            </div>
-                        </a>
-                        <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
-                            <div class="tiles-wrap__tile-inner">
-                                <div class="tile-inner__overlay">
-                                    <div class="tile-content">
-                                        <div>
-                                            <h5>H5 Заголовок</h5>
-                                        </div>
-                                        <div><span class="label">Разработка сайта</span></div>
-                                    </div>
-                                </div>
-                                <div class="tiles-wrap__bg" style="background: url(/img/content/portfolio/3.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
-                            </div>
-                        </a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
