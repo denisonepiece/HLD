@@ -59,10 +59,18 @@ class SiteController extends Controller
         $profile = Profile::find()->asArray()->indexBy('id')->all();
         $type = TypeService::find()->indexBy('id')->asArray()->all();
 
-
         return $this->render('case', [
             'profile' => $profile,
             'type' => $type,
+        ]);
+    }
+
+    public function actionCaseList($id) {
+        $this->layout = false;
+        $profile = Profile::find()->where(['type_service_id' => $id])->orWhere(['type_service_id' => 2])->all();
+
+        return $this->render('case-list', [
+            'profile' => $profile,
         ]);
     }
 
@@ -96,7 +104,6 @@ class SiteController extends Controller
 
     public function actionBrif()
     {
-
 
         $brif = new Brif();
         if ($brif->load(Yii::$app->request->post())) {

@@ -23,6 +23,7 @@ class CaseAsset extends AssetBundle
         'js/menu.js',
         'libs/vanilla-tilt.min.js',
         'libs/smooth-scroll.min.js',
+        'js/case.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
