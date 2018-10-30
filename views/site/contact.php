@@ -23,15 +23,15 @@ ContactAsset::register($this);
         <div class="container-fluid">
             <div class="row between-md">
                 <div class="col-md-4 col-sm-12 col-xs-12 section__inner-content tog-underElements v3">
-                    <div class="label grayC-v4 section__inner-content tog-underElements v4">Республика Алтай, Горно-Алтайск</div>
-                    <div class="p-v5 section__inner-content tog-underElements v2">ул. Чорос-Гуркина, дом 39/8, второй этаж, офис 203</div>
-                    <div class="p-v6">8 (38822) 2-04-03</div>
+                    <div class="label grayC-v4 section__inner-content tog-underElements v4"><?=$contact['location'] ?></div>
+                    <div class="p-v5 section__inner-content tog-underElements v2"><?=$contact['address'] ?></div>
+                    <div class="p-v6"><?=$contact['telephone'] ?></div>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 section__inner-content tog-underElements v3">
                     <div class="contacts-info-block">
-                        <div class="p-v5" itemprop="email">info@hld.agency</div>
+                        <div class="p-v5" itemprop="email"><?=$contact['email'] ?></div>
                         <div class="p-style p-v1">
-                            <a href="#" target="_blank">
+                            <a href="<?=$contact['instagram'] ?>" target="_blank">
                                 instagram
                                 <span>
                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ ContactAsset::register($this);
                             </a>
                         </div>
                         <div class="p-style p-v1">
-                            <a href="#" target="_blank">
+                            <a href="<?=$contact['vk'] ?>" target="_blank">
                                 vk
                                 <span>
                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 18">
@@ -63,13 +63,11 @@ ContactAsset::register($this);
                 <div class="col-md-4 col-sm-12 col-xs-12 section__inner-content tog-underElements v3">
                     <div class="p-v5 section__inner-content tog-underElements v2">Официальные реквизиты</div>
                     <div class="p-style">
-                        ООО “ХАЙПЛЭБ”<br>
-                        ОГРН: 1170400004158<br>
-                        ИНН 0400005490 / КПП 040001001<br>
-                        Р/С: 40702810210000179578<br>
-                        К/С: 30101810145250000974<br>
-                        БИК: 044525974<br>
-                        АО «ТИНЬКОФФ БАНК»
+                        <?php
+                        $pieces = explode(',', $contact['props']);
+                        foreach($pieces as $piece): ?>
+                            <?= $piece?><br>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
