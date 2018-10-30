@@ -5,14 +5,13 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\modules\admin\models\ViewCase;
 use yii\data\ActiveDataProvider;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * ViewCaseController implements the CRUD actions for ViewCase model.
  */
-class ViewCaseController extends Controller
+class ViewCaseController extends AppAdminController
 {
     /**
      * {@inheritdoc}

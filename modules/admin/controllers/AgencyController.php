@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * AgencyController implements the CRUD actions for Agency model.
  */
-class AgencyController extends Controller
+class AgencyController extends AppAdminController
 {
     /**
      * {@inheritdoc}

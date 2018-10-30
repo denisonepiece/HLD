@@ -68,7 +68,7 @@ use yii\helpers\Html;
                             <div class="parallax-elem__inner">
                                 <div class="parallax-elem__artist a rellax" data-rellax-speed="-5.9"></div>
                                 <div class="parallax-elem__artist b rellax" data-rellax-speed="-3"></div>
-                                <a href="/admin" style="cursor: default"><div class="parallax-elem__artist c rellax" data-rellax-speed="1"></div></a>
+                                <a href="/admin/brif" style="cursor: default"><div class="parallax-elem__artist c rellax" data-rellax-speed="1"></div></a>
                                 <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
                                 <div class="parallax-elem__artist e rellax" data-rellax-speed="-4"></div>
                                 <div class="parallax-elem__artist f rellax" data-rellax-speed="-2"></div>
