@@ -2,6 +2,7 @@
 
 use app\assets\BrifAsset;
 use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
 
@@ -14,8 +15,8 @@ BrifAsset::register($this);
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
-                        <h2 class="heading">Готовы посотрудничать?</h2>
-                        <p class="p-style p-v1 header-block__p tog-underCont">Оставьте заявку на оказание услуг, либо свяжитесь с нами, пообщаемся напрямую и сэкономим время: 8 (38822) 2-04-03</p>
+                        <h2 class="heading"><?php if(Yii::$app->session->hasFlash('success')): ?>Ваша завяка принята! <?php else: ?>Готовы посотрудничать? <?php endif; ?></h2>
+                        <p class="p-style p-v1 header-block__p tog-underCont">Оставьте заявку на оказание услуг, либо свяжитесь с нами, пообщаемся напрямую и сэкономим время:  <br>8 (38822) 2-04-03</p>
                     </div>
                 </div>
             </div>
@@ -29,30 +30,34 @@ BrifAsset::register($this);
                         <h5 class="heading">Что требуется</h5>
                     </div>
                 </div>
+                <?php ActiveForm::begin([
+                        'id' => 'Brif'
+                ]) ?>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="checkbox-custom-v1">
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="checkbox-option" id="checkbox-button-opt-one" class="hide-checkbox" value="Option 1">
+                            <input type="checkbox" name="Brif[site]" id="checkbox-button-opt-one" class="hide-checkbox" value="1">
                             <label for="checkbox-button-opt-one">Разработка сайта</label>
                         </div>
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="checkbox-option" id="checkbox-button-opt-two" class="hide-checkbox" value="Option 2">
+                            <input type="checkbox" name="Brif[design]" id="checkbox-button-opt-two" class="hide-checkbox" value="1">
                             <label for="checkbox-button-opt-two">Дизайн</label>
                         </div>
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="checkbox-option" id="checkbox-button-opt-three" class="hide-checkbox" value="Option 3">
+                            <input type="checkbox" name="Brif[smm]" id="checkbox-button-opt-three" class="hide-checkbox" value="1">
                             <label for="checkbox-button-opt-three">SMM</label>
                         </div>
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="checkbox-option" id="checkbox-button-opt-four" class="hide-checkbox" value="Option 4">
+                            <input type="checkbox" name="Brif[ads]" id="checkbox-button-opt-four" class="hide-checkbox" value="1">
                             <label for="checkbox-button-opt-four">Контекстная реклама</label>
                         </div>
                         <div class="checkbox-custom-v1__position">
-                            <input type="checkbox" name="checkbox-option" id="checkbox-button-opt-five" class="hide-checkbox" value="Option 5">
+                            <input type="checkbox" name="Brif[tech_sup]" id="checkbox-button-opt-five" class="hide-checkbox" value="1">
                             <label for="checkbox-button-opt-five">Техническая поддержка</label>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -66,14 +71,12 @@ BrifAsset::register($this);
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-container">
-                        <form>
                             <div class="form-group none-mrg">
-                                <textarea resize: none></textarea>
+                                <textarea resize: none name="Brif[about]"></textarea>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Описание</label>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -90,11 +93,10 @@ BrifAsset::register($this);
             </div>
         </div>
         <div class="container-fluid form-container">
-            <form action="">
                 <div class="row">
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <input type="text" required placeholder="ФИО">
+                            <input type="text" required placeholder="ФИО" name="Brif[name]">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Представьтесь, пожалуйста</label>
@@ -102,7 +104,7 @@ BrifAsset::register($this);
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <input type="text" required placeholder="Какую компанию Вы представляете?">
+                            <input type="text" required placeholder="Какую компанию Вы представляете?" name="Brif[company]">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Компания</label>
@@ -112,7 +114,7 @@ BrifAsset::register($this);
                 <div class="row section__inner-content tog-underElements v2">
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <input type="text" required placeholder="Ваш номер телефона">
+                            <input type="text" required placeholder="Ваш номер телефона" name="Brif[telephone]">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Телефон</label>
@@ -120,7 +122,7 @@ BrifAsset::register($this);
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="form-group">
-                            <input type="text" required placeholder="Оставьте свой e-mail">
+                            <input type="text" required placeholder="Оставьте свой e-mail" name="Brif[email]">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>E-mail</label>
@@ -129,10 +131,13 @@ BrifAsset::register($this);
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <a href="#" class="block-btn one-block-btn v2">Отправить заявку</a>
+                        <?=\yii\helpers\Html::submitButton('Отправить заявку', [
+                                'class' => 'block-btn one-block-btn v2',
+                                'style' => 'border: 0px;',
+                        ]) ?>
                     </div>
                 </div>
-            </form>
+            <?php ActiveForm::end() ?>
         </div>
     </section>
 </main>

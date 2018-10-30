@@ -14,9 +14,11 @@ $this->title = 'Login';
     <section class="section start-sec">
         <div class="container-fluid">
             <h2 class="heading">Вход</h2>
+            <br>
             <?php $form = ActiveForm::begin([
                 'id' => 'login-form',
-            ]); ?>
+            ]);
+            ?>
             <div class="form-container">
                 <form>
                     <div class="form-group">
@@ -44,7 +46,6 @@ $this->title = 'Login';
                 </form>
             </div>
             <?php ActiveForm::end(); ?>
-
         </div>
     </section>
 </main>

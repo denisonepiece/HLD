@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Agency;
+use app\models\Brif;
 use app\models\ViewCase;
 use Yii;
 use yii\web\Controller;
@@ -14,12 +15,14 @@ use app\models\TypeService;
 class SiteController extends Controller
 {
 
-    public function init() {
+    public function init()
+    {
         Yii::$app->view->params['contact'] = Contact::find()->asArray()->one();
         Yii::$app->view->params['agency'] = Agency::find()->asArray()->one();
     }
 
-    public function actions() {
+    public function actions()
+    {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -31,7 +34,8 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
         $profile = Profile::find()->asArray()->where([
             'on_index' => 'y'
         ])->all();
@@ -44,12 +48,14 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionService() {
+    public function actionService()
+    {
 
         return $this->render('service');
     }
 
-    public function actionCase() {
+    public function actionCase()
+    {
         $profile = Profile::find()->asArray()->indexBy('id')->all();
         $type = TypeService::find()->indexBy('id')->asArray()->all();
 
@@ -60,7 +66,8 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionViewCase($id) {
+    public function actionViewCase($id)
+    {
         $case = Profile::findOne([
             'id' => $id,
         ]);
@@ -77,7 +84,8 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionContact() {
+    public function actionContact()
+    {
 
         $contact = Contact::find()->asArray()->one();
 
@@ -86,8 +94,19 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionBrif() {
+    public function actionBrif()
+    {
 
+
+        $brif = new Brif();
+        if ($brif->load(Yii::$app->request->post())) {
+            if ($brif->save()) {
+                Yii::$app->session->setFlash('success', 'Ваша завяка принята. Мы скоро с вами свяжемся:)');
+                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('error', 'Возникила ошибка при отправке завяки. Позвоните нам: +7 388-22 2-04-03');
+            }
+        }
         return $this->render('brif');
     }
 
