@@ -14,9 +14,6 @@ class AdminAsset extends AssetBundle
         'css/forms.css',
         'css/button.css',
         'css/portfolio.css',
-        'libs/slick-slider/css/slick-theme.min.css',
-        'libs/slick-slider/css/slick.min.css',
-        'css/slick-custom.css',
         'libs/base/css/flexboxgrid.css',
         'libs/base/css/normalize.css',
     ];
@@ -33,5 +30,6 @@ class AdminAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
+//        'yii\bootstrap\BootstrapAsset',
     ];
 }

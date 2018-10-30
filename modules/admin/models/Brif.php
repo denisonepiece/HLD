@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace app\modules\admin\models;
 
 use Yii;
 
@@ -35,7 +35,7 @@ class Brif extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'telephone'], 'required'],
+            [['site', 'design', 'smm', 'ads', 'tech_sup', 'about', 'name', 'telephone', 'company', 'email'], 'required'],
             [['site', 'design', 'smm', 'ads', 'tech_sup'], 'integer'],
             [['about'], 'string'],
             [['name', 'company', 'email'], 'string', 'max' => 255],
@@ -49,12 +49,12 @@ class Brif extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Номер заявки',
-            'site' => 'Разработка сайта',
+            'id' => '№ Заказа',
+            'site' => 'Раз. сайта',
             'design' => 'Дизайн',
             'smm' => 'SMM',
-            'ads' => 'Поддержка',
-            'tech_sup' => 'Техническая поддержка',
+            'ads' => 'Кон. реклама',
+            'tech_sup' => 'Тех. поддержка',
             'about' => 'Описание',
             'name' => 'ФИО',
             'telephone' => 'Телефон',
