@@ -62,7 +62,7 @@ use yii\helpers\Html;
     <h3>Блок видео</h3>
     <?php debug(htmlspecialchars('
                <section class="section case-video" id="case-block-v5">
-                  <div id="portfolio-player" data-plyr-provider="vimeo" data-plyr-embed-id="286840168"></div>
+                  <div id="portfolio-player" class="js-player" data-plyr-provider="vimeo" data-plyr-embed-id="286840168"></div>
                </section>
                ')); ?>
 

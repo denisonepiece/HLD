@@ -15,7 +15,7 @@ BrifAsset::register($this);
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
-                        <h2 class="heading"><?php if(Yii::$app->session->hasFlash('success')): ?>Ваша завяка принята! <?php else: ?>Готовы посотрудничать? <?php endif; ?></h2>
+                        <h2 class="heading"><?php if(Yii::$app->session->hasFlash('success')): ?>Ваша завяка принята! <?php elseif(Yii::$app->session->hasFlash('error')): ?>Возникли ошибки с отправкой, позвоните нам! <?php else: ?>Готовы посотрудничать? <?php endif; ?></h2>
                         <p class="p-style p-v1 header-block__p tog-underCont">Оставьте заявку на оказание услуг, либо свяжитесь с нами, пообщаемся напрямую и сэкономим время:  <br>8 (38822) 2-04-03</p>
                     </div>
                 </div>

@@ -35,7 +35,7 @@ class Brif extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'telephone'], 'required'],
+//            [['name', 'telephone'], 'required'],
             [['site', 'design', 'smm', 'ads', 'tech_sup'], 'integer'],
             [['about'], 'string'],
             [['name', 'company', 'email'], 'string', 'max' => 255],
