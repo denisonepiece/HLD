@@ -177,7 +177,7 @@ ServiceAsset::register($this);
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h3 class="heading">Разработка сайтов</h3>
-                        <p class="p-style p-v1 header-block__p tog-underCont">Любим работать над проектами корпоративного класса, электронной коммерции, а также не упускаем из виду интернет-сервисы и порталы.</p>
+                        <p class="p-style p-v1 header-block__p tog-underCont"><?=$service['site_about'] ?></p>
                     </div>
                 </div>
             </div>
@@ -187,18 +187,14 @@ ServiceAsset::register($this);
                         <h5 class="heading hLine">Что делаем</h5>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li class="p-v2">
-                            <p class="p-style">Презентационные сайты</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Корпоративные сайты</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Интернет-сервисы и порталы</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Осуществляем поддержку</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $service['site_what']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li class="p-v2">
+                                <p class="p-style"><?=$piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -220,7 +216,7 @@ ServiceAsset::register($this);
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h3 class="heading">Dизайн</h3>
-                        <p class="p-style p-v1 header-block__p tog-underCont">Создаем привлекающую внимание фирменную идентификацию, стратегии для запуска и продвижения брендов.</p>
+                        <p class="p-style p-v1 header-block__p tog-underCont"><?=$service['design_about'] ?></p>
                     </div>
                 </div>
             </div>
@@ -230,15 +226,14 @@ ServiceAsset::register($this);
                         <h5 class="heading hLine">Что делаем</h5>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li class="p-v2">
-                            <p class="p-style">Логотипы</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Фирменный стиль</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Готовим дизайн-гайдлайны</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $service['design_what']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li class="p-v2">
+                                <p class="p-style"><?=$piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -250,7 +245,7 @@ ServiceAsset::register($this);
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
                         <h3 class="heading">Поддержка и развитие</h3>
-                        <p class="p-style p-v1 header-block__p tog-underCont">Создаем привлекающую внимание фирменную идентификацию, стратегии для запуска и продвижения брендов.</p>
+                        <p class="p-style p-v1 header-block__p tog-underCont"><?=$service['sup_about'] ?></p>
                     </div>
                 </div>
             </div>
@@ -267,21 +262,14 @@ ServiceAsset::register($this);
                         <h6 class="heading">Контекстная реклама</h6>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li class="p-v2">
-                            <p class="p-style">Анализируем нишу</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Проводим аудит сайта</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Управляем ставками</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Работаем с семантическим ядром</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Оцениваем эффективность</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $service['sup_what_ads']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li class="p-v2">
+                                <p class="p-style"><?=$piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 list-count">
@@ -289,15 +277,14 @@ ServiceAsset::register($this);
                         <h6 class="heading">SMM</h6>
                     </div>
                     <ul class="list-content list-togLine">
-                        <li class="p-v2">
-                            <p class="p-style">Настраиваем таргетивную рекламу</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Ведем группы в социальных сетях</p>
-                        </li>
-                        <li class="p-v2">
-                            <p class="p-style">Оформляем группы в социальных сетях</p>
-                        </li>
+                        <?php
+                        $pieces = explode(',', $service['sup_what_smm']);
+                        foreach($pieces as $piece) {
+                            ?>
+                            <li class="p-v2">
+                                <p class="p-style"><?=$piece ?></p>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
