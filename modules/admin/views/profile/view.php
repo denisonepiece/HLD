@@ -4,11 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\Service */
+/* @var $model app\modules\admin\models\Profile */
 
 $this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Profiles', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="service-view">
+<div class="profile-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -27,13 +29,16 @@ $this->title = $model->id;
         'model' => $model,
         'attributes' => [
             'id',
-            'site_about:ntext',
-            'site_what:ntext',
-            'design_about:ntext',
-            'design_what:ntext',
-            'sup_about:ntext',
-            'sup_what_ads:ntext',
-            'sup_what_smm:ntext',
+            'article',
+            'logo',
+            'task',
+            'type_service_id',
+            'link',
+            'image',
+            'view_case_id',
+            'on_index',
+            'description:ntext',
+            'color',
         ],
     ]) ?>
 

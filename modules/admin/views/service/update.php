@@ -5,10 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Service */
 
-$this->title = 'Update Service: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Services', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Update Service Page';
 ?>
 <div class="service-update">
 

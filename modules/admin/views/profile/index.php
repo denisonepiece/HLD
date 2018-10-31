@@ -6,15 +6,16 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Services';
+$this->title = 'Profiles';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="service-index">
+<div class="profile-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
 
     <p>
-<!--        --><?//= Html::a('Create Service', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Profile', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -22,14 +23,17 @@ $this->title = 'Services';
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-//            'id',
-            'site_about:ntext',
-            'site_what:ntext',
-            'design_about:ntext',
-            'design_what:ntext',
-            'sup_about:ntext',
-            'sup_what_ads:ntext',
-            'sup_what_smm:ntext',
+            'id',
+            'article',
+            'logo',
+            'task',
+            'type_service_id',
+            //'link',
+            //'image',
+            //'view_case_id',
+            //'on_index',
+            //'description:ntext',
+            //'color',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

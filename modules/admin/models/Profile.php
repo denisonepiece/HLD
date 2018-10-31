@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace app\modules\admin\models;
 
 use Yii;
 
@@ -15,6 +15,9 @@ use Yii;
  * @property string $link
  * @property string $image
  * @property int $view_case_id
+ * @property string $on_index
+ * @property string $description
+ * @property string $color
  */
 class Profile extends \yii\db\ActiveRecord
 {
@@ -32,9 +35,11 @@ class Profile extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['article', 'logo', 'task', 'type_service_id', 'link', 'image', 'view_case_id'], 'required'],
+            [['article', 'logo', 'task', 'type_service_id', 'link', 'image', 'view_case_id', 'description', 'color'], 'required'],
             [['type_service_id', 'view_case_id'], 'integer'],
+            [['description'], 'string'],
             [['article', 'logo', 'task', 'link', 'image', 'color'], 'string', 'max' => 255],
+            [['on_index'], 'string', 'max' => 10],
         ];
     }
 
@@ -52,6 +57,8 @@ class Profile extends \yii\db\ActiveRecord
             'link' => 'Link',
             'image' => 'Image',
             'view_case_id' => 'View Case ID',
+            'on_index' => 'On Index',
+            'description' => 'Description',
             'color' => 'Color',
         ];
     }
