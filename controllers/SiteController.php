@@ -87,10 +87,9 @@ class SiteController extends Controller
         ]);
         $type = TypeService::find()->indexBy('id')->asArray()->all();
         $view = ViewCase::findOne([
-            'id' => $id,
+            'id' => $case['view_case_id'],
         ]);
 
-//        debug($view);
         return $this->render('view-case', [
             'case' => $case,
             'type' => $type,

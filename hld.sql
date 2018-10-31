@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 30 2018 г., 16:19
--- Версия сервера: 5.6.38
--- Версия PHP: 7.0.26
+-- Время создания: Окт 31 2018 г., 10:58
+-- Версия сервера: 5.5.58
+-- Версия PHP: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -71,7 +71,7 @@ CREATE TABLE `brif` (
 --
 
 INSERT INTO `brif` (`id`, `site`, `design`, `smm`, `ads`, `tech_sup`, `about`, `name`, `telephone`, `company`, `email`) VALUES
-(1, 1, 1, 1, 1, 1, 'gfdgdgg', 'gfdgd', 'gfdgd', 'gfdgfd', 'gfdgdgd');
+(3, 1, 1, 1, 1, 1, 'Suck cock', 'Денис Васильевич Митряков', '89994520590', 'Хайплэб', 'denisloverap@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -95,7 +95,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `location`, `address`, `telephone`, `email`, `instagram`, `vk`, `props`) VALUES
-(1, 'Республика Алтай, Горно-Алтайск', 'ул. Чорос-Гуркина, дом 39/8,\r\nвторой этаж, офис 203', '8 (38822) 2-04-03', 'info@hypelab.ru', 'https://www.instagram.com/hypelab.digital/?hl=ru', 'https://vk.com/hypelabdigital', 'ООО “ХАЙПЛЭБ”\r\nОГРН: 1170400004158\r\nИНН 0400005490 / КПП 040001001\r\nР/С: 40702810210000179578\r\nК/С: 30101810145250000974\r\nБИК: 044525974\r\nАО «ТИНЬКОФФ БАНК»');
+(1, 'Республика Алтай, Горно-Алтайск', 'ул. Чорос-Гуркина, дом 39/8,\r\nвторой этаж, офис 203', '8 (38822) 2-04-03', 'info@hypelab.ru', 'https://www.instagram.com/hypelab.digital/?hl=ru', 'https://vk.com/hypelabdigital', 'ООО “ХАЙПЛЭБ”,\r\nОГРН: 1170400004158,\r\nИНН 0400005490 / КПП 040001001,\r\nР/С: 40702810210000179578,\r\nК/С: 30101810145250000974,\r\nБИК: 044525974,\r\nАО «ТИНЬКОФФ БАНК»');
 
 -- --------------------------------------------------------
 
@@ -121,7 +121,8 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`) VALUES
-(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!');
+(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!'),
+(2, 'хуй', '', '', 1, '', '', 0, 'y', '');
 
 -- --------------------------------------------------------
 
@@ -191,15 +192,16 @@ CREATE TABLE `view_case` (
   `seventeen` text NOT NULL,
   `eighteen` text NOT NULL,
   `nineteen` text NOT NULL,
-  `twenty` text NOT NULL
+  `twenty` text NOT NULL,
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `view_case`
 --
 
-INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`) VALUES
-(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`, `name`) VALUES
+(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня');
 
 --
 -- Индексы сохранённых таблиц
@@ -261,7 +263,7 @@ ALTER TABLE `agency`
 -- AUTO_INCREMENT для таблицы `brif`
 --
 ALTER TABLE `brif`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `contact`
@@ -273,7 +275,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT для таблицы `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `type_service`
