@@ -71,6 +71,7 @@ a.stock-link:hover {
 	text-decoration: none;
 	font-family: 'MontserratRegular';
 	transition: all 250ms ease-out;
+	cursor: pointer;	
 }
 
 .block-btn:active {

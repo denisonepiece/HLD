@@ -16,6 +16,7 @@ class BrifAsset extends AssetBundle
         'css/contacts.css',
         'css/button.css',
         'css/forms.css',
+        'css/modal.css',
         'libs/base/css/flexboxgrid.css',
         'libs/base/css/normalize.css',
     ];
@@ -24,6 +25,7 @@ class BrifAsset extends AssetBundle
         'js/menu.js',
         'libs/smooth-scroll.min.js',
         'js/checkbox.js',
+        'js/modal.js',
         'libs/textarea-autosize.min.js',
         'js/textarea-autosize.init.js',
     ];

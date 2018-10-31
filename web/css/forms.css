@@ -76,6 +76,12 @@
   color: #F53B59
 }
 
+.form-group textarea:focus ~ label, .form-group textarea:valid ~ label {
+  top: -1.5em;
+  font-size: 0.7rem;
+  color: #F53B59
+}
+
 .form-group textarea:focus ~ label {
   top: -1.5em;
   font-size: 0.7rem;

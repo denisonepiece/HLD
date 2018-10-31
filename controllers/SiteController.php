@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Agency;
 use app\models\Brif;
+use app\models\Service;
 use app\models\ViewCase;
 use Yii;
 use yii\web\Controller;
@@ -56,6 +57,7 @@ class SiteController extends Controller
 
     public function actionService()
     {
+        $service = Service::find()->asArray()->one();
 
         return $this->render('service');
     }

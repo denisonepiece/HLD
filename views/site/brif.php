@@ -1,7 +1,6 @@
 <?php
 
 use app\assets\BrifAsset;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
@@ -10,12 +9,28 @@ $this->title = 'HLD agency';
 BrifAsset::register($this);
 ?>
 <main>
+    <div class="modal--alert">
+        <div class="modal__blur <?php if(Yii::$app->session->hasFlash('success')): ?>active<?php endif; ?>"></div>
+        <div class="modal--alert__wrapper <?php if(Yii::$app->session->hasFlash('success')): ?>active<?php endif; ?> ">
+            <div class="modal--alert__inner">
+                <div class="modal--allert__header header-block tog-underCont v3">
+                    <h5 class="heading">Превосходно!</h5>
+                </div>
+                <div class="modal--allert__content">
+                    <p class="p-style p-v1 section__inner-content tog-underElements v1">Мы уже получили Вашу заявку и в скором времени обязательно свяжемся с Вами! Улыбайтесь ;)</p>
+                </div>
+                <div class="modal--allert__footer">
+                    <a class="block-btn one-block-btn v2 modal-open">Закрыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="section start-sec">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
-                        <h2 class="heading"><?php if(Yii::$app->session->hasFlash('success')): ?>Ваша завяка принята! <?php elseif(Yii::$app->session->hasFlash('error')): ?>Возникли ошибки с отправкой, позвоните нам! <?php else: ?>Готовы посотрудничать? <?php endif; ?></h2>
+                        <h2 class="heading"><?php if(Yii::$app->session->hasFlash('error')): ?>Возникли ошибки с отправкой, позвоните нам! <?php else: ?>Готовы посотрудничать? <?php endif; ?></h2>
                         <p class="p-style p-v1 header-block__p tog-underCont">Оставьте заявку на оказание услуг, либо свяжитесь с нами, пообщаемся напрямую и сэкономим время:  <br>8 (38822) 2-04-03</p>
                     </div>
                 </div>
@@ -72,7 +87,7 @@ BrifAsset::register($this);
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-container">
                             <div class="form-group none-mrg">
-                                <textarea resize: none name="Brif[about]"></textarea>
+                                <textarea resize='none' name="Brif[about]" required></textarea>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Описание</label>

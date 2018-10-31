@@ -67,3 +67,38 @@
 		right: -100%;		
 	}	
 }
+
+
+/** Модальный алерт **/
+
+.modal--alert__wrapper {
+	position: fixed;
+	z-index: 9999;
+	top: 28%;
+	width: 35rem;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 250ms ease-out;
+	background-image: url("../img/hldinaction.gif");
+	background-size: cover;
+	color: var(--whiteColor);
+}
+
+.modal--alert__inner {
+	padding: 2rem 3rem;
+	box-sizing: border-box;
+}
+
+.modal--alert__wrapper.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+@media screen and (max-width: 430px) {
+	.modal--alert__wrapper {
+		width: 100%;
+	}
+}
