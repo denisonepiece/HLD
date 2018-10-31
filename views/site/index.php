@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
 
-$this->title = 'HLD agency';
+$this->title = 'HLD.agency';
 IndexAsset::register($this);
 ?>
 

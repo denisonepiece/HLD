@@ -1,10 +1,8 @@
 <?php
 
 use app\assets\ViewCaseAsset;
-use yii\helpers\Html;
 
-
-$this->title = 'HLD profile';
+$this->title = 'Проекты';
 ViewCaseAsset::register($this);
 ?>
 <main>

@@ -3,7 +3,7 @@
 use app\assets\ContactAsset;
 
 
-$this->title = 'HLD contacts';
+$this->title = 'Контакты';
 ContactAsset::register($this);
 ?>
 <main>

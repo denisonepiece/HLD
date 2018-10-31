@@ -2,7 +2,7 @@
 
 use app\assets\ServiceAsset;
 
-$this->title = 'HLD services';
+$this->title = 'Услуги';
 ServiceAsset::register($this);
 ?>
 <main>

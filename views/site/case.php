@@ -2,7 +2,7 @@
 
 use app\assets\CaseAsset;
 
-$this->title = 'HLD cases';
+$this->title = 'Проекты';
 
 CaseAsset::register($this);
 ?>

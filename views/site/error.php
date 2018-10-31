@@ -1,14 +1,10 @@
 <?php
 
-
 use app\assets\ContactAsset;
 
-//$this->registerJs("var rellax = new Rellax('.rellax');");
-
-$this->title = 'HLD agency';
 ContactAsset::register($this);
 
-$this->title = $name;
+$this->title = 'Trouble in my mind';
 ?>
 <main>
     <section class="section start-sec v3">

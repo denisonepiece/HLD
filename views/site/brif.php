@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
 
-$this->title = 'HLD agency';
+$this->title = 'Бриф';
 BrifAsset::register($this);
 ?>
 <main>

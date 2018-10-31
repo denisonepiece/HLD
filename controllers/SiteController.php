@@ -59,7 +59,9 @@ class SiteController extends Controller
     {
         $service = Service::find()->asArray()->one();
 
-        return $this->render('service');
+        return $this->render('service', [
+            'service' => $service,
+        ]);
     }
 
     public function actionCase()
