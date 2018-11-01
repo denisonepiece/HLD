@@ -3,8 +3,6 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 
-$this->registerJsFile('js/modal.js');
-
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -16,7 +14,7 @@ $this->registerJsFile('js/modal.js');
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body style = "overflow-y: scroll;">
+    <body <?php if(($_SERVER['REQUEST_URI'] == '/contact') || ($_SERVER['REQUEST_URI'] == '/case')): ?>style = "overflow-y: scroll;"  <?php endif; ?>>
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <div class="wrapper-content">

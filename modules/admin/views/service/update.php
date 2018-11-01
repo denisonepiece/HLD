@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Service */
 
-$this->title = 'Update Service Page';
+$this->title = 'Услуги';
 ?>
 <div class="service-update">
 

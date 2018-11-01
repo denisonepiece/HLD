@@ -6,8 +6,7 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'View Cases';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Виды проектов';
 ?>
 <div class="view-case-index">
 
@@ -15,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php Pjax::begin(); ?>
 
     <p>
-        <?= Html::a('Create View Case', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить вид', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

@@ -50,16 +50,16 @@ class Profile extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'article' => 'Article',
-            'logo' => 'Logo',
-            'task' => 'Task',
-            'type_service_id' => 'Type Service ID',
-            'link' => 'Link',
-            'image' => 'Image',
-            'view_case_id' => 'View Case ID',
-            'on_index' => 'On Index',
-            'description' => 'Description',
-            'color' => 'Color',
+            'article' => 'Название',
+            'logo' => 'Логотип',
+            'task' => 'Задача',
+            'type_service_id' => 'Тип услуги',
+            'link' => 'Ссылка на проект',
+            'image' => 'Изобр. для главной',
+            'view_case_id' => 'ID открытого проекта',
+            'on_index' => 'Вывод на главную?',
+            'description' => 'Описание для главной',
+            'color' => 'Цвет шапки',
         ];
     }
 }

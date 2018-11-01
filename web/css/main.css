@@ -92,7 +92,6 @@ body.modalActive {
 	position: fixed;
 	overflow: hidden;
 	z-index: 1000;
-	
 	background: rgb(255, 255, 255);
 	/**background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
 	background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
@@ -114,6 +113,7 @@ body.modalActive {
 .navigation-right {
 	display: flex;
 	justify-content: space-between;
+
 }
 
 .navigation-right {
@@ -122,6 +122,7 @@ body.modalActive {
 
 .navigation-left {
 	flex-grow: 1;
+		
 	padding: 1rem 0;
 }
 
@@ -395,6 +396,9 @@ body.modalActive {
 	}
 
 }
+
+
+
 
 
 /***** Футтер *****/

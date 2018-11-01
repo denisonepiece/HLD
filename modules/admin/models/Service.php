@@ -44,13 +44,13 @@ class Service extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'site_about' => 'Site About',
-            'site_what' => 'Site What',
-            'design_about' => 'Design About',
-            'design_what' => 'Design What',
-            'sup_about' => 'Sup About',
-            'sup_what_ads' => 'Sup What Ads',
-            'sup_what_smm' => 'Sup What Smm',
+            'site_about' => 'Разработка сайта',
+            'site_what' => 'Что делаем',
+            'design_about' => 'Дизайн',
+            'design_what' => 'Что делаем',
+            'sup_about' => 'Поддержка',
+            'sup_what_ads' => 'Кон. реклама',
+            'sup_what_smm' => 'SMM',
         ];
     }
 }

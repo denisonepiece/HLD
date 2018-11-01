@@ -57,7 +57,7 @@ class ViewCase extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'name',
+            'name' => 'Название проекта',
             'one' => 'One',
             'two' => 'Two',
             'three' => 'Three',

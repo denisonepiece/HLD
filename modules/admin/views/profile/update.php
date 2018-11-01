@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Profile */
 
-$this->title = 'Update Profile: ' . $model->id;
+$this->title = $model->article;
 ?>
 <div class="profile-update">
 

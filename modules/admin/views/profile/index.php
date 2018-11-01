@@ -6,7 +6,7 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Profiles';
+$this->title = 'Проекты';
 ?>
 <div class="profile-index">
 
@@ -14,7 +14,8 @@ $this->title = 'Profiles';
     <?php Pjax::begin(); ?>
 
     <p>
-        <?= Html::a('Create Profile', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить проект', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Загрузить изображения', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
