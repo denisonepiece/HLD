@@ -7,7 +7,6 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Profiles';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="profile-index">
 
@@ -25,12 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'article',
-            'logo',
+//            'logo',
             'task',
             'type_service_id',
             //'link',
             //'image',
-            //'view_case_id',
+            'view_case_id',
             //'on_index',
             //'description:ntext',
             //'color',

@@ -6,7 +6,7 @@ $this->title = 'Проекты';
 ViewCaseAsset::register($this);
 ?>
 <main>
-    <section class="section start-sec v2 case-intro" style="background-color: #CCC; color: ;">
+    <section class="section start-sec v2 case-intro" style="background-color: <?=$case['color'] ?>; color: ;">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-sm-4 col-xs-12">

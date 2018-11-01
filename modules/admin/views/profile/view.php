@@ -7,8 +7,6 @@ use yii\widgets\DetailView;
 /* @var $model app\modules\admin\models\Profile */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Profiles', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="profile-view">
 
