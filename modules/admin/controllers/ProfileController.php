@@ -91,14 +91,29 @@ class ProfileController extends Controller
 
     public function actionUpload()
     {
-        $model = new UploadForm();
+        if(Yii::$app->request->get()) {
+            $id = Yii::$app->request->get();
+            $model = new UploadForm();
 
-        if (Yii::$app->request->isPost) {
-            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
-            if ($model->upload()) {
-                // file is uploaded successfully
-                return 'suck';
+            if (Yii::$app->request->isPost) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                if ($model->upload()) {
+                    return $this->redirect(['update', 'id' => $id['id']]);
+                }
+
             }
+        } else {
+            $model = new UploadForm();
+
+            if (Yii::$app->request->isPost) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                if ($model->upload()) {
+                    return $this->redirect(['create']);
+                }
+
+            }
+
+
         }
 
         return $this->render('upload', ['model' => $model]);

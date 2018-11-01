@@ -12,6 +12,18 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
+    <hr>
+    <h3>Загрузка изображений</h3>
+    <?= Html::a('Загрузить изображения', ['upload', 'id' => $model->id],['class' => 'btn btn-danger']) ?>
+    <Br><br>
+
+    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+
+    <!--    --><?php //debug($model) ?>
+    <hr>
+
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
@@ -22,16 +34,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'type_service_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\TypeService::find()->all(), 'id', 'type')) ?>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
-
-    <hr>
-    <h3>Загрузка изображений</h3>
-
-    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
-
-<!--    --><?php //debug($model) ?>
-    <hr>
 
     <?= $form->field($model, 'view_case_id')->textInput() ?>
 

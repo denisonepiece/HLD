@@ -7,6 +7,8 @@ use app\modules\admin\models\ViewCase;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\admin\models\UploadForm;
+use yii\web\UploadedFile;
 
 /**
  * ViewCaseController implements the CRUD actions for ViewCase model.
@@ -32,6 +34,37 @@ class ViewCaseController extends AppAdminController
      * Lists all ViewCase models.
      * @return mixed
      */
+
+    public function actionUpload()
+    {
+        if(Yii::$app->request->get()) {
+            $id = Yii::$app->request->get();
+            $model = new UploadForm();
+
+            if (Yii::$app->request->isPost) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                if ($model->upload()) {
+                    return $this->redirect(['update', 'id' => $id['id']]);
+                }
+
+            }
+        } else {
+            $model = new UploadForm();
+
+            if (Yii::$app->request->isPost) {
+                $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+                if ($model->upload()) {
+                    return $this->redirect(['create']);
+                }
+
+            }
+
+
+        }
+
+        return $this->render('upload', ['model' => $model]);
+    }
+
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
