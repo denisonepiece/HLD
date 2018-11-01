@@ -29,14 +29,21 @@ $this->title = $model->id;
             'id',
             'article',
             'logo',
+            'color',
             'task',
             'type_service_id',
+//            [
+//                    'attribute' => 'type_service_id',
+//                    'value' => function($data) {
+//                        return $data->type_service_id;
+//                    }
+//            ],
             'link',
             'image',
             'view_case_id',
             'on_index',
             'description:ntext',
-            'color',
+
         ],
     ]) ?>
 

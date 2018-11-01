@@ -15,7 +15,7 @@ $this->title = 'Проекты';
 
     <p>
         <?= Html::a('Добавить проект', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Загрузить изображения', ['create'], ['class' => 'btn btn-success']) ?>
+<!--        --><?//= Html::a('Загрузить изображения', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

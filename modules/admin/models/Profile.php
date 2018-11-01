@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\models;
 
+use app\models\TypeService;
 use Yii;
 
 /**
@@ -29,13 +30,17 @@ class Profile extends \yii\db\ActiveRecord
         return 'profile';
     }
 
+    public function getTypeService() {
+        return $this->hasMany(TypeService::className(), ['id' => 'type_service_id']);
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['article', 'logo', 'task', 'type_service_id', 'link', 'image', 'view_case_id', 'description', 'color'], 'required'],
+            [['article', 'logo', 'task', 'type_service_id', 'link', 'view_case_id', 'description', 'color'], 'required'],
             [['type_service_id', 'view_case_id'], 'integer'],
             [['description'], 'string'],
             [['article', 'logo', 'task', 'link', 'image', 'color'], 'string', 'max' => 255],

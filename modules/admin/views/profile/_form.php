@@ -10,27 +10,34 @@ use yii\widgets\ActiveForm;
 
 <div class="profile-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'task')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'type_service_id')->textInput() ?>
+<!--    --><?//= $form->field($model, 'type_service_id')->dropDownList(['1' => 'Разрабработка сайта', '2' => 'Запуск бренда', '3' => 'Дизайн', '4' => 'Поддержка']) ?>
+    <?= $form->field($model, 'type_service_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\TypeService::find()->all(), 'id', 'type')) ?>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
+    <hr>
+    <h3>Загрузка изображений</h3>
+
+    <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+
+<!--    --><?php //debug($model) ?>
+    <hr>
 
     <?= $form->field($model, 'view_case_id')->textInput() ?>
 
-    <?= $form->field($model, 'on_index')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'on_index')->dropDownList(['y' => 'Да', '' => 'Нет']) ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
