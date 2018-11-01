@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 31 2018 г., 10:58
--- Версия сервера: 5.5.58
--- Версия PHP: 7.1.12
+-- Время создания: Ноя 01 2018 г., 18:31
+-- Версия сервера: 5.6.38
+-- Версия PHP: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -71,7 +71,8 @@ CREATE TABLE `brif` (
 --
 
 INSERT INTO `brif` (`id`, `site`, `design`, `smm`, `ads`, `tech_sup`, `about`, `name`, `telephone`, `company`, `email`) VALUES
-(3, 1, 1, 1, 1, 1, 'Suck cock', 'Денис Васильевич Митряков', '89994520590', 'Хайплэб', 'denisloverap@gmail.com');
+(19, 1, 1, 0, 0, 0, 'ewqeqw', 'ewqeqw', 'ewqeqw', 'ewqeqw', 'ewqeqw'),
+(20, 1, 1, 1, 1, 1, 'eqwewqeeqw', 'ewqeqw', 'eqweqwe', 'ewqeqw', 'eqweqweqwewq');
 
 -- --------------------------------------------------------
 
@@ -113,16 +114,40 @@ CREATE TABLE `profile` (
   `image` varchar(255) NOT NULL,
   `view_case_id` int(11) NOT NULL,
   `on_index` varchar(10) DEFAULT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `color` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `profile`
 --
 
-INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`) VALUES
-(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!'),
-(2, 'хуй', '', '', 1, '', '', 0, 'y', '');
+INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`) VALUES
+(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!', '#123243');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `service`
+--
+
+CREATE TABLE `service` (
+  `id` int(11) NOT NULL,
+  `site_about` text NOT NULL,
+  `site_what` text NOT NULL,
+  `design_about` text NOT NULL,
+  `design_what` text NOT NULL,
+  `sup_about` text NOT NULL,
+  `sup_what_ads` text NOT NULL,
+  `sup_what_smm` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `service`
+--
+
+INSERT INTO `service` (`id`, `site_about`, `site_what`, `design_about`, `design_what`, `sup_about`, `sup_what_ads`, `sup_what_smm`) VALUES
+(1, 'Любим работать над проектами корпоративного класса, электронной коммерции, а также не упускаем из виду интернет-сервисы и порталы.', 'Презентационные сайты, Корпоративные сайты, Интернет-сервисы и порталы, Осуществляем поддержку', 'Создаем привлекающую внимание фирменную идентификацию, стратегии для запуска и продвижения брендов.', 'Логотипы, Фирменный стиль, Готовим дизайн-гайдлайны', 'Создаем привлекающую внимание фирменную идентификацию, стратегии для запуска и продвижения брендов.', 'Анализируем нишу,Проводим аудит сайта,Управляем ставками,Работаем с семантическим ядром,Оцениваем эффективность', 'Настраиваем таргетивную рекламу,Ведем группы в социальных сетях,Оформляем группы в социальных сетях');
 
 -- --------------------------------------------------------
 
@@ -201,7 +226,7 @@ CREATE TABLE `view_case` (
 --
 
 INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`, `name`) VALUES
-(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня');
+(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"286840168\"></div>\r\n               </section>\r\n               ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"296428357\"></div>\r\n               </section>\r\n               ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня');
 
 --
 -- Индексы сохранённых таблиц
@@ -229,6 +254,12 @@ ALTER TABLE `contact`
 -- Индексы таблицы `profile`
 --
 ALTER TABLE `profile`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `service`
+--
+ALTER TABLE `service`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -263,7 +294,7 @@ ALTER TABLE `agency`
 -- AUTO_INCREMENT для таблицы `brif`
 --
 ALTER TABLE `brif`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `contact`
@@ -275,7 +306,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT для таблицы `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `service`
+--
+ALTER TABLE `service`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `type_service`
