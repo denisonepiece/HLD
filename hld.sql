@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 01 2018 г., 18:31
--- Версия сервера: 5.6.38
--- Версия PHP: 7.0.26
+-- Время создания: Ноя 02 2018 г., 12:16
+-- Версия сервера: 5.5.58
+-- Версия PHP: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -123,7 +123,8 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`) VALUES
-(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!', '#123243');
+(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!', '#123243'),
+(2, 'Брэд Питт', 'logo.jpg', 'Распиарить типа', 2, 'vk.com', 'fon.jpg', 2, 'y', 'Распиарили типа, как могли', '#123243');
 
 -- --------------------------------------------------------
 
@@ -226,7 +227,8 @@ CREATE TABLE `view_case` (
 --
 
 INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`, `name`) VALUES
-(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"286840168\"></div>\r\n               </section>\r\n               ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"296428357\"></div>\r\n               </section>\r\n               ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня');
+(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"286840168\"></div>\r\n               </section>\r\n               ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"296428357\"></div>\r\n               </section>\r\n               ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня'),
+(2, '<section class=\"section case-img-v2\" id=\"case-block-v6\">\r\n                  <div style=\"background-image: url(img/content/portfolio/logo.jpg);\"></div>\r\n               </section>', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    ', '<section class=\"section case-fifty reverse\" id=\"case-block-v3\" style=\"background-color:; color: ;\">\r\n                                            <div class=\"case-fifty__text\">\r\n                     <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                        аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                     </p>\r\n                  </div>\r\n                  <div class=\"case-fifty__img\" style=\"background-image: url(img/content/portfolio/fon.jpg)\"></div>\r\n               </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Индексы сохранённых таблиц
@@ -306,7 +308,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT для таблицы `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `service`
@@ -330,7 +332,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `view_case`
 --
 ALTER TABLE `view_case`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
