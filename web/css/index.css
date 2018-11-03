@@ -1,34 +1,133 @@
 .intro{
 	height: 100vh;
 	position: relative;
-	padding: 0 1.875em;
+	padding: 0 7rem;
 }
 
 .intro__header {
 	position: absolute;
-	top: 20%;
-	width: 50%;
+	top: 24%;
+	width: 60%;
 }
 
 
 .intro__header h1 {
-	text-transform: uppercase;
 	z-index: 400;
+	font-size: 5.5rem;	
+}
+
+@media screen and (max-width: 1785px) {
+	.intro__header {
+		width: 64%;
+	} 
+}
+
+@media screen and (max-width: 1674px) {
+	.intro__header {
+		width: 68.8%;
+	} 
+
+}
+
+@media screen and (max-width: 1557px) {
+	.intro__header {
+		width: 73.9%;
+	} 
+
+}
+
+@media screen and (max-width: 1449px) {
+	.intro__header {
+		width: 79.5%;
+		top: 20%;
+	} 
+
+}
+
+@media screen and (max-width: 1347px) {
+
+	.intro{
+		padding: 0 3rem;
+	}
+
+	.intro__header {
+		width: 85.5%;
+
+	} 
+
+}
+
+@media screen and (max-width: 1326px) {
+	.intro__header {
+		width: 80%;
+	} 
+
+}
+
+@media screen and (max-width: 1255px) {
+	.intro__header {
+		width: 86%;
+	} 
+
+}
+
+@media screen and (max-width: 1090px) {
+	.intro__header {
+		width: 92.4%;
+	} 
+}
+
+@media screen and (max-width: 1090px) {
+	.intro__header {
+		width: 92%;
+	} 
 }
 
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 1018px) {
+	.intro__header {
+		width: 81%;
+	} 
+
+	.intro__header h1 {
+		font-size: 4.5rem;
+	}
+}
+
+
+@media screen and (max-width: 879px) {
+	.intro__header {
+		width: 87.1%;
+	} 
+}
+
+
+@media screen and (max-width: 817px) {
+	.intro__header {
+		width: 67%;
+		box-sizing: border-box;
+	} 
+}
+
+
+@media screen and (max-width: 543px) {
+
 	.intro {
 		height: 100vh;
 		padding: 0 1.875em;
 	}
 
 	.intro__header {
+		width: auto;
 		top: 30%;
-		width: 67%;
+		position: relative;
+	} 
+
+	.intro__header h1 {
+		font-size: 3.3rem;
+		
 	}
 }
-
 
 
 .parallax-elem {
@@ -44,8 +143,6 @@
 	box-sizing: border-box;
 	position: relative;
 }
-
-
 
 
 .parallax-elem__artist {
@@ -90,7 +187,7 @@
 
 .parallax-elem__artist.d {
 	top: 60%;
-	left: 0;
+	left: -4%;
 	background: url(../img/parallax/d.png);
 	background-size: contain;
 	width: 23.125rem;
@@ -170,5 +267,87 @@
 }
 
 
-/** прописать запросы на изменение 
-размера блоков и положение **/
+@media screen and (max-width: 1600px) {
+	.parallax-elem__artist.a,
+	.parallax-elem__artist.b,
+	.parallax-elem__artist.c,
+	.parallax-elem__artist.d,
+	.parallax-elem__artist.e,
+	.parallax-elem__artist.f,
+	.parallax-elem__artist.g,
+	.parallax-elem__artist.u,
+	.parallax-elem__artist.k,
+	.parallax-elem__artist.l,
+	.parallax-elem__artist.o,
+	.parallax-elem__artist.p {
+		width: 13.5rem;
+		background-repeat: no-repeat;
+	}
+
+	.parallax-elem__artist.d {
+		top: 70%;
+		left: -5%;
+		width: 18.75rem;
+		height: 9.5rem;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+	.parallax-elem__artist.a,
+	.parallax-elem__artist.b,
+	.parallax-elem__artist.c,
+	.parallax-elem__artist.d,
+	.parallax-elem__artist.e,
+	.parallax-elem__artist.f,
+	.parallax-elem__artist.g,
+	.parallax-elem__artist.u,
+	.parallax-elem__artist.k,
+	.parallax-elem__artist.l,
+	.parallax-elem__artist.o,
+	.parallax-elem__artist.p {
+		width: 12rem;
+		background-repeat: no-repeat;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.parallax-elem__artist.a,
+	.parallax-elem__artist.b,
+	.parallax-elem__artist.c,
+	.parallax-elem__artist.d,
+	.parallax-elem__artist.e,
+	.parallax-elem__artist.f,
+	.parallax-elem__artist.g,
+	.parallax-elem__artist.u,
+	.parallax-elem__artist.k,
+	.parallax-elem__artist.l,
+	.parallax-elem__artist.o,
+	.parallax-elem__artist.p {
+		width: 9rem;
+		background-repeat: no-repeat;
+	}
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.parallax-elem__artist.a,
+	.parallax-elem__artist.b,
+	.parallax-elem__artist.c,
+	.parallax-elem__artist.d,
+	.parallax-elem__artist.e,
+	.parallax-elem__artist.f,
+	.parallax-elem__artist.g,
+	.parallax-elem__artist.u,
+	.parallax-elem__artist.k,
+	.parallax-elem__artist.l,
+	.parallax-elem__artist.o,
+	.parallax-elem__artist.p {
+		display: none;
+	}
+}
+
+
+

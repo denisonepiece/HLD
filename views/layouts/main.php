@@ -12,6 +12,13 @@ use yii\helpers\Html;
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
+        <meta name="description" content="HLD — студия разработки практичных интернет-решений.">
+        <meta name="keywords" content="hld, hypelab digital, разработка сайтов, разработка сервисов, разработка порталов, сибирь, алтай">
+
+        <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
         <?php $this->head() ?>
     </head>
     <body <?php if(($_SERVER['REQUEST_URI'] == '/contact') || ($_SERVER['REQUEST_URI'] == '/case')): ?>style = "overflow-y: scroll;"  <?php endif; ?>>
@@ -65,21 +72,21 @@ use yii\helpers\Html;
                 <?php
                 if($_SERVER[REQUEST_URI] == '/') {
                        echo '<div class="parallax-elem">
-                            <div class="parallax-elem__inner">
-                                <div class="parallax-elem__artist a rellax" data-rellax-speed="-5.9"></div>
-                                <div class="parallax-elem__artist b rellax" data-rellax-speed="-3"></div>
-                                <a href="/admin" style="cursor: default"><div class="parallax-elem__artist c rellax" data-rellax-speed="1"></div></a>
-                                <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
-                                <div class="parallax-elem__artist e rellax" data-rellax-speed="-4"></div>
-                                <div class="parallax-elem__artist f rellax" data-rellax-speed="-2"></div>
-                                <div class="parallax-elem__artist g rellax" data-rellax-speed="-3"></div>
-                                <div class="parallax-elem__artist u rellax" data-rellax-speed="2"></div>
-                                <div class="parallax-elem__artist k rellax" data-rellax-speed="-4"></div>
-                                <div class="parallax-elem__artist l rellax" data-rellax-speed="-5"></div>
-                                <div class="parallax-elem__artist o rellax" data-rellax-speed="-3"></div>
-                                <div class="parallax-elem__artist p rellax" data-rellax-speed="-1"></div>
+                                <div class="parallax-elem__inner">
+                                     <div class="parallax-elem__artist a rellax" data-rellax-speed="-4"></div>
+                                     <div class="parallax-elem__artist b rellax" data-rellax-speed="4"></div>
+                                     <a href="/admin" style="cursor: default"><div class="parallax-elem__artist c rellax" data-rellax-speed="2"></div></a>
+                                     <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
+                                     <div class="parallax-elem__artist e rellax" data-rellax-speed="-3"></div>
+                                     <div class="parallax-elem__artist f rellax" data-rellax-speed="-.7"></div>
+                                     <div class="parallax-elem__artist g rellax" data-rellax-speed="-3"></div>
+                                     <div class="parallax-elem__artist u rellax" data-rellax-speed="2"></div>
+                                     <div class="parallax-elem__artist k rellax" data-rellax-speed="-1.8"></div>
+                                     <div class="parallax-elem__artist l rellax" data-rellax-speed="1"></div>
+                                     <div class="parallax-elem__artist o rellax" data-rellax-speed="3"></div>
+                                     <div class="parallax-elem__artist p rellax" data-rellax-speed="9"></div>
+                                </div>
                             </div>
-                        </div>
                         <div class="intro">
                             <div class="intro__header">
                                 <h1>'.$this->params['agency']['intro'].'</h1>

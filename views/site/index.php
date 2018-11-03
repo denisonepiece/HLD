@@ -13,7 +13,7 @@ IndexAsset::register($this);
     <section class="section section-v1">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-sm col-xs">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">HLD - digital агенство</h2>
                         <p class="p-style p-v1"><?= $this->params['agency']['about'] ?>
@@ -26,7 +26,7 @@ IndexAsset::register($this);
     <section class="section section-v1">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-sm col-xs">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">Направления</h2>
                         <p class="p-style p-v1 header-block__p tog-underCont"><?= $this->params['agency']['dir_about'] ?></p>
@@ -81,7 +81,7 @@ IndexAsset::register($this);
                 </div>
             </div>
             <div class="row">
-                <div class="col-md col-sm col-xs">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <a href="<?=Url::to(['/site/service/']); ?>" class="link-btn one-link-btn">
                         <span>Подробнее об услугах</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
@@ -95,7 +95,7 @@ IndexAsset::register($this);
     <section class="section section-v1">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-sm col-xs">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="header-block tog-underCont">
                         <h2 class="heading">Наши работы</h2>
                         <p class="p-style p-v1 header-block__p  tog-underCont"><?= $this->params['agency']['case_about'] ?></p>
