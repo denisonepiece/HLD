@@ -30,7 +30,7 @@ use yii\helpers\Html;
                     <div class="navigation-wrp">
                         <div class="navigation-inner">
                             <div class="responsive-navigation">
-                                <div class="responsive-navigation__logo"></div>
+                                <a href="<?=Url::to(['/site/index/']);?>"><div class="responsive-navigation__logo"></div></a>
                                 <div class="responsive-navigation__humburger">
                                     <span></span>
                                 </div>
@@ -52,7 +52,6 @@ use yii\helpers\Html;
                                                     $flag = true;
                                             }
                                             ?>
-
                                             <li><a href="<?=Url::to(['/site/index/']);?>" <?php if($_SERVER[REQUEST_URI] == '/' || $_SERVER[REQUEST_URI] == '/brif' ) echo 'class = "link-nav__active"' ?>>Компания</a></li>
                                             <li><a href="<?=Url::to(['/site/service/']);?>" <?php if($_SERVER[REQUEST_URI] == '/service') echo 'class = "link-nav__active"' ?>>Услуги</a></li>
                                             <li><a href="<?=Url::to(['/site/case/']);?>" <?php if(($_SERVER[REQUEST_URI] == '/case')|| $flag ) echo 'class = "link-nav__active"' ?>>Проекты</a></li>
@@ -75,7 +74,7 @@ use yii\helpers\Html;
                                 <div class="parallax-elem__inner">
                                      <div class="parallax-elem__artist a rellax" data-rellax-speed="-4"></div>
                                      <div class="parallax-elem__artist b rellax" data-rellax-speed="4"></div>
-                                     <a href="/admin" style="cursor: default"><div class="parallax-elem__artist c rellax" data-rellax-speed="2"></div></a>
+                                     <div class="parallax-elem__artist c rellax" data-rellax-speed="2"></div>
                                      <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
                                      <div class="parallax-elem__artist e rellax" data-rellax-speed="-3"></div>
                                      <div class="parallax-elem__artist f rellax" data-rellax-speed="-.7"></div>

@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 //$this->registerJs("var rellax = new Rellax('.rellax');");
 
-$this->title = 'HLD.agency';
+$this->title = 'HLD agency';
 IndexAsset::register($this);
 ?>
 
@@ -156,7 +156,7 @@ IndexAsset::register($this);
                 <div class="col-md col-sm col-xs">
                     <div class="tiles-wrap section__inner-content tog-underElements">
                         <?php foreach ($blocks as $block): ?>
-                        <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
+                        <a href="<?=\yii\helpers\Url::to(['site/view-case', 'id' => $block['id']]) ?>" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="17">
                             <div class="tiles-wrap__tile-inner">
                                 <div class="tile-inner__overlay">
                                     <div class="tile-content">
