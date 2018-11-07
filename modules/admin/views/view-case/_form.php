@@ -14,10 +14,12 @@ use yii\widgets\ActiveForm;
         <div class="col-md-7">
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= Html::a('Загрузить изображения', ['upload', 'id' => $model->id],['class' => 'btn btn-danger']) ?>
+    <?= Html::a('Загрузить изображения', ['upload', 'id' => $model->id],['class' => 'btn btn-danger fixed upload-img']) ?>
     <br><br>
 
-    <?= $form->field($model, 'name')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'name')->textarea(['rows' => 6], [
+            'rows' => '1'
+    ]) ?>
 
     <?= $form->field($model, 'one')->textarea(['rows' => 6]) ?>
 
@@ -60,7 +62,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'twenty')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success fixed save-btn']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

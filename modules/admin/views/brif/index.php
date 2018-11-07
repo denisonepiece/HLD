@@ -6,17 +6,16 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Brifs';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Заявки';
 ?>
 <div class="brif-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
 
-    <p>
+<!--    <p>-->
 <!--        --><?//= Html::a('Create Brif', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<!--    </p>-->
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

@@ -45,13 +45,13 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'location' => 'Location',
-            'address' => 'Address',
-            'telephone' => 'Telephone',
+            'location' => 'Местоположение',
+            'address' => 'Адрес',
+            'telephone' => 'Телефон',
             'email' => 'Email',
-            'instagram' => 'Instagram',
-            'vk' => 'Vk',
-            'props' => 'Props',
+            'instagram' => 'Инстаграм',
+            'vk' => 'Вконтакте',
+            'props' => 'Реквизиты',
         ];
     }
 }

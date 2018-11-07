@@ -1,0 +1,13 @@
+.fixed {
+    position: fixed;
+}
+
+.upload-img {
+    left: 120px;
+    top: 60px;
+}
+
+.save-btn {
+    left: 10px;
+    top: 60px;
+}
