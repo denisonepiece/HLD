@@ -31,7 +31,7 @@ $('#site1').on('click', function() {
 });
 
 $('#site2').on('click', function() {
-    var id = 2;
+    var id = 3;
     $.ajax({
         url:'/site/case-list',
         data: {id: id},
@@ -47,7 +47,7 @@ $('#site2').on('click', function() {
 });
 
 $('#site3').on('click', function() {
-    var id = 3;
+    var id = 4;
     $.ajax({
         url:'/site/case-list',
         data: {id: id},
