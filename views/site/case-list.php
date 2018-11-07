@@ -1,3 +1,4 @@
+<div class="tiles-wrap section__inner-content tog-underElements">
 <?php foreach($profile as $profile): ?>
     <a href="<?=\yii\helpers\Url::to(['site/view-case', 'id' => $profile['id']]) ?>" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="10">
         <div class="tiles-wrap__tile-inner">
@@ -13,3 +14,5 @@
         </div>
     </a>
 <?php endforeach; ?>
+</div>
+<script src="libs/vanilla-tilt.min.js"></script>

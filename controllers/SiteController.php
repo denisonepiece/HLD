@@ -77,7 +77,11 @@ class SiteController extends Controller
 
     public function actionCaseList($id) {
         $this->layout = false;
+        if($id == 0) {
+            $profile = Profile::find()->all();
+        } else {
         $profile = Profile::find()->where(['type_service_id' => $id])->orWhere(['type_service_id' => 2])->all();
+        }
         $type = TypeService::find()->indexBy('id')->asArray()->all();
 
         return $this->render('case-list', [

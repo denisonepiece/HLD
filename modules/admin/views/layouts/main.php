@@ -38,6 +38,7 @@ AppAsset::register($this);
                 ['label' => 'Услуги', 'url' => ['service/index']],
                 ['label' => 'Проекты', 'url' => ['profile/index']],
                 ['label' => 'Открытые проекты', 'url' => ['view-case/index']],
+                ['label' => 'Контакты', 'url' => ['contact/index']],
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/login/login']]
                 ) : (

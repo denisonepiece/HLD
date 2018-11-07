@@ -21,7 +21,7 @@ use yii\helpers\Html;
         <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
         <?php $this->head() ?>
     </head>
-    <body <?php if(($_SERVER['REQUEST_URI'] == '/contact') || ($_SERVER['REQUEST_URI'] == '/case')): ?>style = "overflow-y: scroll;"  <?php endif; ?>>
+    <body <?php if(($_SERVER['REQUEST_URI'] == '/contact') || ($_SERVER['REQUEST_URI'] == '/case')): ?>style = "overflow-y: scroll;" <?php endif; ?>>
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <div class="wrapper-content">
@@ -60,7 +60,7 @@ use yii\helpers\Html;
                                     </div>
                                     <div class="info-nav">
                                         <div class="info-nav__tel">
-                                            <div>+7 388-22 <span>2-04-03</span></div>
+                                            <div><?= $this->params['contact']['telephone'] ?></div>
                                         </div>
                                     </div>
                                 </div>

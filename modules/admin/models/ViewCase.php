@@ -28,6 +28,7 @@ use Yii;
  * @property string $eighteen
  * @property string $nineteen
  * @property string $twenty
+ * @property string $name
  */
 class ViewCase extends \yii\db\ActiveRecord
 {
@@ -45,8 +46,9 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-//            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'required'],
+//            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'name'], 'required'],
             [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
+            [['name'], 'string', 'max' => 255],
         ];
     }
 
@@ -57,7 +59,6 @@ class ViewCase extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Название проекта',
             'one' => 'One',
             'two' => 'Two',
             'three' => 'Three',
@@ -78,6 +79,7 @@ class ViewCase extends \yii\db\ActiveRecord
             'eighteen' => 'Eighteen',
             'nineteen' => 'Nineteen',
             'twenty' => 'Twenty',
+            'name' => 'Name',
         ];
     }
 }

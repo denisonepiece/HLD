@@ -1,3 +1,19 @@
+$('#site').on('click', function() {
+    var id = 0;
+    $.ajax({
+        url:'/site/case-list',
+        data: {id: id},
+        type: 'GET',
+        success: function(result){
+            $('.content').html(result);
+        },
+        error: function () {
+            alert('Error!');
+        }
+    });
+    return false;
+});
+
 $('#site1').on('click', function() {
     var id = 1;
     $.ajax({
@@ -47,7 +63,7 @@ $('#site3').on('click', function() {
 });
 
 $(document).ready( function () {
-    var id = 1;
+    var id = 0;
     $.ajax({
         url:'/site/case-list',
         data: {id: id},

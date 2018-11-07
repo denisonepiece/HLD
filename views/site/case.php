@@ -16,9 +16,10 @@ CaseAsset::register($this);
                         <div class="link-nav custom-v1 selectActive">
                             <ul>
                                 <!-- link-nav__active присваиваем к ссылке активному разделу -->
-                                <li><a href="" id="site1" class="link-nav__active">Сайты</a></li>
+                                <li><a href="" id="site" class="link-nav__active">Все</a></li>
+                                <li><a href="" id="site1">Сайты</a></li>
                                 <li><a href="" id="site2">Дизайн</a></li>
-                                <li><a href="" id="site3">Поддержка</a></li>
+                                <li><a href="" id="site3">Продвижение</a></li>
                             </ul>
                         </div>
                     </div>
@@ -29,9 +30,8 @@ CaseAsset::register($this);
     <section class="section section-v1">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md col-sm col-xs">
-                    <div class="tiles-wrap section__inner-content tog-underElements content">
-                    </div>
+                <div class="col-md col-sm col-xs content">
+<!--                    Кейсы добавляются с помощью ajax-->
                 </div>
             </div>
         </div>

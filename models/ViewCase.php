@@ -18,6 +18,17 @@ use Yii;
  * @property string $eight
  * @property string $nine
  * @property string $ten
+ * @property string $eleven
+ * @property string $twelve
+ * @property string $thirteen
+ * @property string $fourteen
+ * @property string $fifteen
+ * @property string $sixteen
+ * @property string $seventeen
+ * @property string $eighteen
+ * @property string $nineteen
+ * @property string $twenty
+ * @property string $name
  */
 class ViewCase extends \yii\db\ActiveRecord
 {
@@ -35,8 +46,9 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'], 'required'],
-            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'], 'string'],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'name'], 'required'],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
+            [['name'], 'string', 'max' => 255],
         ];
     }
 
@@ -57,6 +69,17 @@ class ViewCase extends \yii\db\ActiveRecord
             'eight' => 'Eight',
             'nine' => 'Nine',
             'ten' => 'Ten',
+            'eleven' => 'Eleven',
+            'twelve' => 'Twelve',
+            'thirteen' => 'Thirteen',
+            'fourteen' => 'Fourteen',
+            'fifteen' => 'Fifteen',
+            'sixteen' => 'Sixteen',
+            'seventeen' => 'Seventeen',
+            'eighteen' => 'Eighteen',
+            'nineteen' => 'Nineteen',
+            'twenty' => 'Twenty',
+            'name' => 'Name',
         ];
     }
 }
