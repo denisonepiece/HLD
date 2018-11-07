@@ -27,7 +27,7 @@ use yii\helpers\Html;
         <div class="wrapper-content">
             <header>
                 <nav>
-                    <div class="navigation-wrp">
+                    <div class="navigation-wrp cd-auto-hide-header">
                         <div class="navigation-inner">
                             <div class="responsive-navigation">
                                 <a href="<?=Url::to(['/site/index/']);?>"><div class="responsive-navigation__logo"></div></a>
@@ -38,7 +38,7 @@ use yii\helpers\Html;
                             <div class="navigation">
                                 <div class="navigation-left">
                                     <a href="<?=Url::to(['/site/index/']);?>" class="logo">
-                                        <div class="logo__emblem"></div>
+<!--                                        <div class="logo__emblem"></div>-->
                                         <div class="logo__text-elements"></div>
                                     </a>
                                 </div>
@@ -72,18 +72,18 @@ use yii\helpers\Html;
                 if($_SERVER[REQUEST_URI] == '/') {
                        echo '<div class="parallax-elem">
                                 <div class="parallax-elem__inner">
-                                     <div class="parallax-elem__artist a rellax" data-rellax-speed="-4"></div>
-                                     <div class="parallax-elem__artist b rellax" data-rellax-speed="4"></div>
-                                     <div class="parallax-elem__artist c rellax" data-rellax-speed="2"></div>
-                                     <div class="parallax-elem__artist d rellax" data-rellax-speed="3"></div>
+                                     <div class="parallax-elem__artist a rellax" data-rellax-speed="-5"></div>
+                                     <div class="parallax-elem__artist b rellax" data-rellax-speed="-2"></div>
+                                     <div class="parallax-elem__artist c rellax" data-rellax-speed="6"></div>
+                                     <div class="parallax-elem__artist d rellax" data-rellax-speed="18"></div>
                                      <div class="parallax-elem__artist e rellax" data-rellax-speed="-3"></div>
                                      <div class="parallax-elem__artist f rellax" data-rellax-speed="-.7"></div>
                                      <div class="parallax-elem__artist g rellax" data-rellax-speed="-3"></div>
-                                     <div class="parallax-elem__artist u rellax" data-rellax-speed="2"></div>
+                                     <div class="parallax-elem__artist u rellax" data-rellax-speed="1"></div>
                                      <div class="parallax-elem__artist k rellax" data-rellax-speed="-1.8"></div>
-                                     <div class="parallax-elem__artist l rellax" data-rellax-speed="1"></div>
-                                     <div class="parallax-elem__artist o rellax" data-rellax-speed="3"></div>
-                                     <div class="parallax-elem__artist p rellax" data-rellax-speed="9"></div>
+                                     <div class="parallax-elem__artist l rellax" data-rellax-speed="6"></div>
+                                     <div class="parallax-elem__artist o rellax" data-rellax-speed="4"></div>
+                                     <div class="parallax-elem__artist p rellax" data-rellax-speed="14"></div>
                                 </div>
                             </div>
                         <div class="intro">
@@ -145,7 +145,7 @@ use yii\helpers\Html;
                                       </g>
                                    </svg>
                                 </span>
-                                    hld_agency
+                                    hld.agency
                                 </a>
                             </div>
                         </div>
