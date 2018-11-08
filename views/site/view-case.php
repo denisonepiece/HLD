@@ -68,5 +68,53 @@ ViewCaseAsset::register($this);
     <?=$view['eighteen']; ?>
     <?=$view['nineteen']; ?>
     <?=$view['twenty']; ?>
-
+    <section class="section section-v1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md col-sm col-xs">
+                    <a href="" class="link-btn one-link-btn">
+                        <span>Следующий кейс</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
+                            <polygon points="47.4,1.3 45.7,3.5 54.4,10.2 1.5,10.2 1.5,12.9 54.4,12.9 45.7,19.6 47.4,21.8 60.6,11.5 "/>
+                        </svg>
+                    </a>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md col-sm col-xs">
+                    <div class="header-block tog-underCont v2">
+                        <h5 class="heading">Другие работы</h5>
+                    </div>                   
+                </div>                
+            </div>
+        </div>
+    </section>
+               <section class="section">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-md col-sm col-xs">
+                           <div class="tiles-wrap section__inner-content tog-underElements">
+                              <a href="#" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500" data-tilt-max="10">
+                                 <div class="tiles-wrap__tile-inner">
+                                    <div class="tile-inner__overlay">
+                                       <div class="tile-content">
+                                          <div>
+                                             <h5>Хан Алтай</h5>
+                                          </div>
+                                          <div><span class="label">Разработка сайта</span></div>
+                                       </div>
+                                    </div>
+                                    <div class="tiles-wrap__bg" style="background: url(img/content/portfolio/2.jpg); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>    
 </main>
+<script src="libs/vanilla-tilt.min.js"></script>  
