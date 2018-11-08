@@ -62,6 +62,8 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'twenty')->textarea(['rows' => 6]) ?>
 
+            <?= $form->field($model, 'another')->textarea(['rows' => 1]) ?>
+
             <div class="form-group">
                 <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success fixed save-btn']) ?>
             </div>

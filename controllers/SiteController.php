@@ -75,12 +75,13 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionCaseList($id) {
+    public function actionCaseList($id)
+    {
         $this->layout = false;
-        if($id == 0) {
+        if ($id == 0) {
             $profile = Profile::find()->all();
         } else {
-        $profile = Profile::find()->where(['type_service_id' => $id])->orWhere(['type_service_id' => 2])->all();
+            $profile = Profile::find()->where(['type_service_id' => $id])->orWhere(['type_service_id' => 2])->all();
         }
         $type = TypeService::find()->indexBy('id')->asArray()->all();
 
@@ -100,10 +101,25 @@ class SiteController extends Controller
             'id' => $case['view_case_id'],
         ]);
 
+//      Выбор кейсов в "Другие проекты"
+        $pieces = explode(',', $view['another']);
+
+        $another = Profile::find()->where([
+            'id' => $pieces[0]
+        ])->orWhere([
+            'id' => $pieces[1]
+        ])->orWhere([
+            'id' => $pieces[2]
+        ])->all();
+//
+        $next = Profile::find()->asArray()->all();
+        debug($case);
+
         return $this->render('view-case', [
             'case' => $case,
             'type' => $type,
             'view' => $view,
+            'another' => $another,
         ]);
     }
 

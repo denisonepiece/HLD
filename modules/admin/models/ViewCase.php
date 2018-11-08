@@ -46,15 +46,12 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-//            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'name'], 'required'],
             [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
-            [['name'], 'string', 'max' => 255],
+            [['name', 'another'], 'string', 'max' => 255],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
+
     public function attributeLabels()
     {
         return [
@@ -80,6 +77,7 @@ class ViewCase extends \yii\db\ActiveRecord
             'nineteen' => 'Nineteen',
             'twenty' => 'Twenty',
             'name' => 'Name',
+            'another' => 'Another'
         ];
     }
 }

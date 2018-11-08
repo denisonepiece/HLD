@@ -48,6 +48,7 @@ $this->title = $model->name;
             'eighteen:ntext',
             'nineteen:ntext',
             'twenty:ntext',
+            'another',
         ],
     ]) ?>
 
