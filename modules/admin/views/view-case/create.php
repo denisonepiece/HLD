@@ -6,13 +6,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\ViewCase */
 
-$this->title = 'Create View Case';
-$this->params['breadcrumbs'][] = ['label' => 'View Cases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Добавить вид';
 ?>
 <div class="view-case-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<!--    <h2>--><?//= Html::encode($this->title) ?><!--</h2>-->
 
     <?= $this->render('_form', [
         'model' => $model,

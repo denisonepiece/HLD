@@ -40,7 +40,7 @@ class Profile extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['article', 'logo', 'task', 'type_service_id', 'link', 'view_case_id', 'description', 'color'], 'required'],
+//            [['article', 'logo', 'task', 'type_service_id', 'link', 'view_case_id', 'description', 'color'], 'required'],
             [['type_service_id', 'view_case_id'], 'integer'],
             [['description'], 'string'],
             [['article', 'logo', 'task', 'link', 'image', 'color'], 'string', 'max' => 255],

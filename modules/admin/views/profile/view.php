@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Profile */
 
-$this->title = $model->id;
+$this->title = $model->article;
 ?>
 <div class="profile-view">
 

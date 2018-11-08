@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost
--- Время создания: Ноя 04 2018 г., 11:39
--- Версия сервера: 5.6.32-78.0-log
--- Версия PHP: 5.6.37
+-- Хост: 127.0.0.1:3306
+-- Время создания: Ноя 08 2018 г., 11:43
+-- Версия сервера: 5.6.38
+-- Версия PHP: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `vh166482_hld`
+-- База данных: `hld`
 --
 
 -- --------------------------------------------------------
@@ -64,6 +66,14 @@ CREATE TABLE `brif` (
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `brif`
+--
+
+INSERT INTO `brif` (`id`, `site`, `design`, `smm`, `ads`, `tech_sup`, `about`, `name`, `telephone`, `company`, `email`) VALUES
+(19, 1, 1, 0, 0, 0, 'ewqeqw', 'ewqeqw', 'ewqeqw', 'ewqeqw', 'ewqeqw'),
+(20, 1, 1, 1, 1, 1, 'eqwewqeeqw', 'ewqeqw', 'eqweqwe', 'ewqeqw', 'eqweqweqwewq');
+
 -- --------------------------------------------------------
 
 --
@@ -86,7 +96,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `location`, `address`, `telephone`, `email`, `instagram`, `vk`, `props`) VALUES
-(1, 'Республика Алтай, Горно-Алтайск', 'ул. Чорос-Гуркина, дом 39/8,\r\nвторой этаж, офис 203', '8 (38822) 2-04-03', 'info@hypelab.ru', 'https://www.instagram.com/hypelab.digital/?hl=ru', 'https://vk.com/hypelabdigital', 'ООО “ХАЙПЛЭБ”,\r\nОГРН: 1170400004158,\r\nИНН 0400005490 / КПП 040001001,\r\nР/С: 40702810210000179578,\r\nК/С: 30101810145250000974,\r\nБИК: 044525974,\r\nАО «ТИНЬКОФФ БАНК»');
+(1, 'Республика Алтай, Горно-Алтайск', 'ул. Чорос-Гуркина, дом 39/8,второй этаж, офис 203', '+7 388-22<span> 2-04-03 </span>', 'info@hypelab.ru', 'https://www.instagram.com/hypelab.digital/?hl=ru', 'https://vk.com/hypelabdigital', 'ООО “ХАЙПЛЭБ”,\r\nОГРН: 1170400004158,\r\nИНН 0400005490 / КПП 040001001,\r\nР/С: 40702810210000179578,\r\nК/С: 30101810145250000974,\r\nБИК: 044525974,\r\nАО «ТИНЬКОФФ БАНК»');
 
 -- --------------------------------------------------------
 
@@ -113,8 +123,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`) VALUES
-(1, 'Кондитерская \"Тортодельня\"', 'tort.jpg', 'Разработать фирменный стиль и сайт-конструктор компании', 2, 'tortodelna.ru', 'tort.jpg', 1, 'y', 'Здесь будет описание данного кейса!!!!', '#123243'),
-(2, 'Брэд Питт', 'logo.jpg', 'Распиарить типа', 2, 'vk.com', 'fon.jpg', 2, 'y', 'Распиарили типа, как могли', '#123243');
+(3, 'Инжиниринговый центр', 'logo.jpg', 'Разработка корпоративного сайта для гос. организации', 1, 'engineering-ra.ru', 'fon-slider.jpg', 3, 'y', 'Разработка корпоративного сайта для гос. организации', '#000000');
 
 -- --------------------------------------------------------
 
@@ -217,8 +226,7 @@ CREATE TABLE `view_case` (
 --
 
 INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`, `name`) VALUES
-(1, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть. \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-fifty\" id=\"case-block-v2\" style=\"background-color:; color: ;\">\r\n        <div class=\"case-fifty__text\">\r\n            <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n            </p>\r\n        </div>\r\n        <div class=\"case-fifty__img\" style=\"background-image: url(/img/content/portfolio/1.jpg);\"></div>\r\n    </section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"286840168\"></div>\r\n               </section>\r\n               ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n                  <img src=\"img/content/portfolio/test.jpg\">\r\n               </section>\r\n               \r\n               <section class=\"section case-video\" id=\"case-block-v5\">\r\n                  <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"296428357\"></div>\r\n               </section>\r\n               ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Тортодельня'),
-(2, '<section class=\"section case-img-v2\" id=\"case-block-v6\">\r\n                  <div style=\"background-image: url(img/content/portfolio/logo.jpg);\"></div>\r\n               </section>', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    ', '<section class=\"section case-fifty reverse\" id=\"case-block-v3\" style=\"background-color:; color: ;\">\r\n                                            <div class=\"case-fifty__text\">\r\n                     <p class=\"p-style p-v1\">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                        аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.\r\n                     </p>\r\n                  </div>\r\n                  <div class=\"case-fifty__img\" style=\"background-image: url(img/content/portfolio/fon.jpg)\"></div>\r\n               </section>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(3, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Не так давно, Минэкономразвития РФ запустило проект по созданию региональных инжиниринговых центров. РЦИ призваны сформировать сетевую инфраструктуру инжиниринга, способствующую адаптации научных разработок для промышленного производства, коммерциализации технологий и знаний.\r\n                    </p>\r\n<br><br>\r\n<p class=\"p-style p-v1\">Там, где становление новых организаций, там и разработка интернет-решений для таковых. И для одного из центров, а именно для регионального центра инжиниринга Республики Алтай, нашей команде выпала возможность разработать корпоративный сайт, в первую очередь, наиболее лаконично отображающий основные цели и задачи организации, посредством ненагруженного интерфейса и аккуратно структурированной информации.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-video\" id=\"case-block-v5\">\r\n    <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"299432251\"></div>\r\n</section>', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Разработка началась с прототипирования каждой отдельной страницы, каждый блок был структурирован и помещен в нужное место.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Prototype.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Стартовая страница включает в себя наиболее важные разделы сайта, поэтому пользователь может интуитивно найти всю необходимую информацию.  \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Main-page.jpg\">\r\n</section>\r\n             ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Внутренние страницы представлены в общем, чистом и серьезном стиле. Основная цель этой работы заключалась в создании интерфейса с большим удобством и функциональностью, как подобает сайтам государственного значения.  \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-1.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-2.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-3.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Для удобства мобильных пользователей все страницы сайта адаптированы для просмотра на смартфонах и планшетах.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/mobile.jpg\">\r\n</section>\r\n               ', '', '', '', '', '', '', '', '', 'Инжиниринг');
 
 --
 -- Индексы сохранённых таблиц
@@ -281,41 +289,50 @@ ALTER TABLE `view_case`
 --
 ALTER TABLE `agency`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `brif`
 --
 ALTER TABLE `brif`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT для таблицы `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT для таблицы `service`
 --
 ALTER TABLE `service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `type_service`
 --
 ALTER TABLE `type_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `view_case`
 --
 ALTER TABLE `view_case`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
