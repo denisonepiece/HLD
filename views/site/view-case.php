@@ -73,7 +73,8 @@ ViewCaseAsset::register($this);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md col-sm col-xs">
-                    <a href="<?=\yii\helpers\Url::to(['site/view-case', 'id' => $another['id']]) ?>" class="link-btn one-link-btn">
+                    <a href="<?= \yii\helpers\Url::to(['site/view-case', 'id' => $idid]) ?>"
+                       class="link-btn one-link-btn">
                         <span>Следующий кейс</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.9 23">
                             <polygon
@@ -101,21 +102,24 @@ ViewCaseAsset::register($this);
                 <div class="col-md col-sm col-xs">
                     <div class="tiles-wrap section__inner-content tog-underElements">
                         <?php foreach ($another as $case): ?>
-                        <a href="<?=\yii\helpers\Url::to(['site/view-case', 'id' => $case['id']]) ?>" class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500"
-                           data-tilt-max="10">
-                            <div class="tiles-wrap__tile-inner">
-                                <div class="tile-inner__overlay">
-                                    <div class="tile-content">
-                                        <div>
-                                            <h5><?= $case['article'] ?></h5>
+                            <a href="<?= \yii\helpers\Url::to(['site/view-case', 'id' => $case['id']]) ?>"
+                               class="tiles-wrap__tile" data-tilt data-tilt-scale="1.06" data-tilt-speed="500"
+                               data-tilt-max="10">
+                                <div class="tiles-wrap__tile-inner">
+                                    <div class="tile-inner__overlay">
+                                        <div class="tile-content">
+                                            <div>
+                                                <h5><?= $case['article'] ?></h5>
+                                            </div>
+                                            <div>
+                                                <span class="label"><?= $type[$case['type_service_id']]['type'] ?></span>
+                                            </div>
                                         </div>
-                                        <div><span class="label"><?= $type[$case['type_service_id']]['type'] ?></span></div>
                                     </div>
+                                    <div class="tiles-wrap__bg"
+                                         style="background: url(img/content/portfolio/<?= $case['image'] ?>); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
                                 </div>
-                                <div class="tiles-wrap__bg"
-                                     style="background: url(img/content/portfolio/<?=$case['image'] ?>); background-size: cover;background-position: center center; background-repeat: no-repeat;"></div>
-                            </div>
-                        </a>
+                            </a>
                         <?php endforeach; ?>
                     </div>
                 </div>

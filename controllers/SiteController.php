@@ -66,13 +66,7 @@ class SiteController extends Controller
 
     public function actionCase()
     {
-        $profile = Profile::find()->asArray()->indexBy('id')->all();
-        $type = TypeService::find()->indexBy('id')->asArray()->all();
-
-        return $this->render('case', [
-            'profile' => $profile,
-            'type' => $type,
-        ]);
+        return $this->render('case');
     }
 
     public function actionCaseList($id)
@@ -111,15 +105,30 @@ class SiteController extends Controller
         ])->orWhere([
             'id' => $pieces[2]
         ])->all();
-//
-        $next = Profile::find()->asArray()->all();
-        debug($case);
+
+//        Вычисление id следующей страницы
+
+        $next = Profile::find()->select('id')->indexBy('id')->asArray()->all();
+
+        $last = Profile::findBySql('SELECT id FROM profile ORDER BY id DESC LIMIT 1')->asArray()->all();
+
+        $first = Profile::find()->select('id')->asArray()->one();
+//        получаем следующий id существующей записи
+        $idid = $id + 1;
+        while (!isset($next[$idid])) {
+            $idid++;
+//            Если мы на последней записи, то перебрасываем на первую
+            if ($idid > $last[0]['id']) {
+                $idid = $first['id'];
+            }
+        }
 
         return $this->render('view-case', [
             'case' => $case,
             'type' => $type,
             'view' => $view,
             'another' => $another,
+            'idid' => $idid
         ]);
     }
 
