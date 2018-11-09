@@ -111,7 +111,9 @@ use yii\widgets\ActiveForm;
 </section>
                ')); ?>
 
-            <h3>Изображение для связки с видео</h3>
+<!--            <h3>Изображение для связки с видео</h3>-->
+            <h3>Блок изображения</h3>
+
             <?php debug(htmlspecialchars('
 <section class="section case-img-v1" id="case-block-v4">
     <img src="img/content/portfolio/test.jpg">
@@ -125,12 +127,12 @@ use yii\widgets\ActiveForm;
 </section>
                ')); ?>
 
-            <h3>Блок изображения</h3>
-            <?php debug(htmlspecialchars('
-<section class="section case-img-v2" id="case-block-v6">
-    <div style="background-image: url(img/content/portfolio/2.jpg);"></div>
-</section>
-               ')); ?>
+<!--            <h3>Блок изображения</h3>-->
+<!--            --><?php //debug(htmlspecialchars('
+//<section class="section case-img-v2" id="case-block-v6">
+//    <div style="background-image: url(img/content/portfolio/2.jpg);"></div>
+//</section>
+//               ')); ?>
         </div>
     </div>
 
