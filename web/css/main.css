@@ -161,8 +161,8 @@ body.modalActive {
 	z-index: 20;
 	transition: all 150ms ease-out;
 	background: url(../img/logo.svg) no-repeat right;
-	background-color: #FFF;
-	background-size: 9rem;
+	/*background-color: #FFF;*/
+	/*background-size: 9rem;*/
 	height: 2rem;
 	width: 4.7rem;
 }
@@ -191,15 +191,27 @@ body.modalActive {
 }
 
 .link-nav ul li a {
-	text-transform: uppercase;
-	color: var(--blackColor);
-	text-decoration: none;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	letter-spacing: 0.075em;
-	font-family: 'MontserratRegular';
+     text-transform: uppercase;
+     color: var(--blackColor);
+     text-decoration: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 100%;
+     letter-spacing: 0.075em;
+     font-family: 'MontserratRegular';
+ }
+
+.link-nav-rev ul li a {
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    letter-spacing: 0.075em;
+    font-family: 'MontserratRegular';
 }
 
 .link-nav ul li a:hover {
@@ -348,7 +360,8 @@ body.modalActive {
 
 	.responsive-navigation__logo {
 		height: 2.5rem;
-		width: 8rem;
+		width: 5rem;
+		/*background-size: 5rem;*/
 		background: url(../img/logo.svg) no-repeat left center;
 	}
 

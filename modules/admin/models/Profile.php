@@ -43,8 +43,8 @@ class Profile extends \yii\db\ActiveRecord
 //            [['article', 'logo', 'task', 'type_service_id', 'link', 'view_case_id', 'description', 'color'], 'required'],
             [['type_service_id', 'view_case_id'], 'integer'],
             [['description'], 'string'],
-            [['article', 'logo', 'task', 'link', 'image', 'color'], 'string', 'max' => 255],
-            [['on_index'], 'string', 'max' => 10],
+            [['article', 'logo', 'task', 'link', 'image', 'color', 'text_color'], 'string', 'max' => 255],
+            [['on_index', 'theme'], 'string', 'max' => 10],
         ];
     }
 
@@ -65,6 +65,8 @@ class Profile extends \yii\db\ActiveRecord
             'on_index' => 'Вывод на главную?',
             'description' => 'Описание для главной',
             'color' => 'Цвет шапки',
+            'theme' => 'Тема',
+            'text_color' => 'Цвет текста в шапке',
         ];
     }
 }

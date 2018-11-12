@@ -87,6 +87,8 @@ class SiteController extends Controller
 
     public function actionViewCase($id)
     {
+        $this->layout = false;
+
         $case = Profile::findOne([
             'id' => $id,
         ]);

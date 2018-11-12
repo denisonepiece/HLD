@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 12 2018 г., 13:35
--- Версия сервера: 5.5.58
--- Версия PHP: 7.1.12
+-- Время создания: Ноя 12 2018 г., 16:52
+-- Версия сервера: 5.6.38
+-- Версия PHP: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -117,15 +117,17 @@ CREATE TABLE `profile` (
   `view_case_id` int(11) NOT NULL,
   `on_index` varchar(10) DEFAULT NULL,
   `description` text NOT NULL,
-  `color` varchar(255) NOT NULL
+  `color` varchar(255) NOT NULL,
+  `theme` varchar(10) DEFAULT NULL,
+  `text_color` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `profile`
 --
 
-INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`) VALUES
-(1, 'Инжиниринговый центр', 'logo.jpg', 'Разработка корпоративного сайта для гос. организации', 1, 'engineering-ra.ru', 'fon-slider.jpg', 3, 'y', 'Разработка корпоративного сайта для гос. организации', '#000000');
+INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`, `theme`, `text_color`) VALUES
+(1, 'Инжиниринговый центр', 'logo.jpg', 'Разработка корпоративного сайта для гос. организации', 1, 'engineering-ra.ru', 'fon-slider.jpg', 3, 'y', 'Разработка корпоративного сайта для гос. организации', '#00FFFF', 'light', '#00FF00');
 
 -- --------------------------------------------------------
 

@@ -17,6 +17,8 @@ use yii\widgets\ActiveForm;
     <?= Html::a('Загрузить изображения', ['upload', 'id' => $model->id],['class' => 'btn btn-danger']) ?>
     <Br><br>
 
+    <?= $form->field($model, 'theme')->dropDownList(['dark' => 'Темная', 'light' => 'Светлая']) ?>
+
     <?= $form->field($model, 'logo')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
@@ -27,6 +29,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'article')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'text_color')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'task')->textInput(['maxlength' => true]) ?>
 

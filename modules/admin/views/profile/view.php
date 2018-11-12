@@ -28,8 +28,10 @@ $this->title = $model->article;
         'attributes' => [
             'id',
             'article',
+            'theme',
             'logo',
             'color',
+            'text_color',
             'task',
             'type_service_id',
 //            [
