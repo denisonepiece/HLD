@@ -294,7 +294,7 @@ body.modalActive {
 	.navigation-active {
 		visibility: visible;
 		opacity: 1;
-		top: 7vh;
+		top: 5vh;
 	}
 
 	.navigation-left {

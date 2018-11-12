@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Ноя 12 2018 г., 16:52
--- Версия сервера: 5.6.38
--- Версия PHP: 7.0.26
+-- Хост: localhost
+-- Время создания: Ноя 12 2018 г., 19:06
+-- Версия сервера: 5.6.32-78.0-log
+-- Версия PHP: 5.6.37
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,8 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `hld`
+-- База данных: `vh166482_hld`
 --
+CREATE DATABASE IF NOT EXISTS `vh166482_hld` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `vh166482_hld`;
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `article`, `logo`, `task`, `type_service_id`, `link`, `image`, `view_case_id`, `on_index`, `description`, `color`, `theme`, `text_color`) VALUES
-(1, 'Инжиниринговый центр', 'logo.jpg', 'Разработка корпоративного сайта для гос. организации', 1, 'engineering-ra.ru', 'fon-slider.jpg', 3, 'y', 'Разработка корпоративного сайта для гос. организации', '#00FFFF', 'light', '#00FF00');
+(1, 'Инжиниринговый центр', 'eng-logo-case.png', 'Разработка корпоративного сайта для государственной организации', 1, 'engineering-ra.ru', 'fon-slider.jpg', 3, 'y', 'Разработка корпоративного сайта для гос. организации', '#f8f5ff', 'light', '#000');
 
 -- --------------------------------------------------------
 
@@ -231,7 +231,7 @@ CREATE TABLE `view_case` (
 --
 
 INSERT INTO `view_case` (`id`, `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`, `eleven`, `twelve`, `thirteen`, `fourteen`, `fifteen`, `sixteen`, `seventeen`, `eighteen`, `nineteen`, `twenty`, `name`, `another`) VALUES
-(3, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Не так давно, Минэкономразвития РФ запустило проект по созданию региональных инжиниринговых центров. РЦИ призваны сформировать сетевую инфраструктуру инжиниринга, способствующую адаптации научных разработок для промышленного производства, коммерциализации технологий и знаний.\r\n                    </p>\r\n<br><br>\r\n<p class=\"p-style p-v1\">Там, где становление новых организаций, там и разработка интернет-решений для таковых. И для одного из центров, а именно для регионального центра инжиниринга Республики Алтай, нашей команде выпала возможность разработать корпоративный сайт, в первую очередь, наиболее лаконично отображающий основные цели и задачи организации, посредством ненагруженного интерфейса и аккуратно структурированной информации.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-video\" id=\"case-block-v5\">\r\n    <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"299432251\"></div>\r\n</section>', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Разработка началась с прототипирования каждой отдельной страницы, каждый блок был структурирован и помещен в нужное место.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Prototype.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Стартовая страница включает в себя наиболее важные разделы сайта, поэтому пользователь может интуитивно найти всю необходимую информацию.  \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Main-page.jpg\">\r\n</section>\r\n             ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Внутренние страницы представлены в общем, чистом и серьезном стиле. Основная цель этой работы заключалась в создании интерфейса с большим удобством и функциональностью, как подобает сайтам государственного значения.  \r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-1.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-2.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Inner-page-3.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\">Для удобства мобильных пользователей все страницы сайта адаптированы для просмотра на смартфонах и планшетах.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/mobile.jpg\">\r\n</section>\r\n               ', '', '', '', '', '', '', '', '', 'Инжиниринг', '1, 2, 3');
+(3, '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:#f8f5ff; color:#000 ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\"></br></br>Не так давно, Минэкономразвития РФ запустило проект по созданию региональных инжиниринговых центров. РЦИ призваны сформировать сетевую инфраструктуру инжиниринга, способствующую адаптации научных разработок для промышленного производства, коммерциализации технологий и знаний.</br></br>\r\n                    </p>\r\n<br><br>\r\n<p class=\"p-style p-v1\">Там, где становление новых организаций, там и разработка интернет-решений для таковых. И для одного из центров, а именно для регионального центра инжиниринга Республики Алтай, нашей команде выпала возможность разработать корпоративный сайт, в первую очередь, наиболее лаконично отображающий основные цели и задачи организации, посредством ненагруженного интерфейса и аккуратно структурированной информации.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-video\" id=\"case-block-v5\">\r\n    <div id=\"portfolio-player\" class=\"js-player\" data-plyr-provider=\"vimeo\" data-plyr-embed-id=\"300220252\"></div>\r\n</section>\r\n', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-02.jpg\">\r\n</section>\r\n\r\n<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\"></br></br></br>Разработка началась с прототипирования каждой отдельной страницы, каждый блок был структурирован и помещен в нужное место.</br></br></br>\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-03.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:#f8f5ff; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\"></br>Стартовая страница включает в себя наиболее важные разделы сайта, поэтому пользователь может интуитивно найти всю необходимую информацию.  </br>\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-05.jpg\">\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-06.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:#f8f5ff; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\"></br>Внутренние страницы представлены в общем, чистом и серьезном стиле. Основная цель этой работы заключалась в создании интерфейса с большим удобством и функциональностью, как подобает сайтам государственного значения.  </br>\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-07.jpg\">\r\n</section>\r\n          ', '<section class=\"section section-v1\" id=\"case-block-v1\" style=\"background-color:#f8f5ff; color: ;\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-7 col-sm col-xs\">\r\n                    <p class=\"p-style p-v1\"></br>Для удобства мобильных пользователей все страницы сайта адаптированы для просмотра на смартфонах и планшетах.</br>\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n</section>', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-08.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-09.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-10.jpg\">\r\n</section>\r\n          ', '<section class=\"section case-img-v1\" id=\"case-block-v4\">\r\n    <img src=\"img/content/portfolio/Engineering-11.jpg\">\r\n</section>\r\n          ', '', '', '', '', '', 'Инжиниринг', '1, 2, 3');
 
 --
 -- Индексы сохранённых таблиц
@@ -294,50 +294,41 @@ ALTER TABLE `view_case`
 --
 ALTER TABLE `agency`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT для таблицы `brif`
 --
 ALTER TABLE `brif`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
 --
 -- AUTO_INCREMENT для таблицы `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT для таблицы `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `service`
 --
 ALTER TABLE `service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT для таблицы `type_service`
 --
 ALTER TABLE `type_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT для таблицы `view_case`
 --
 ALTER TABLE `view_case`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

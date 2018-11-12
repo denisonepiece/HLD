@@ -35,13 +35,13 @@ ViewCaseAsset::register($this);
                     <div class="navigation-inner">
                         <div class="responsive-navigation">
                             <a href="<?= Url::to(['/site/index/']); ?>">
-                                <div class="responsive-navigation__logo"></div>
+                                <div class="responsive-navigation__logo" <?php if($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
                             </a>
                             <div class="responsive-navigation__humburger">
                                 <span></span>
                             </div>
                         </div>
-                        <div class="navigation">
+                        <div class="navigation" style="background-color: <?= $case['color'] ?>">
                             <div class="navigation-left">
                                 <a href="<?= Url::to(['/site/index/']); ?>" class="logo">
                                     <div class="logo__text-elements" <?php if($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
