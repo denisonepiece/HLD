@@ -22,7 +22,8 @@ class ServiceAsset extends AssetBundle
         'libs/base/js/jquery-3.3.1.min.js',
         'js/menu.js',
         'libs/smooth-scroll.min.js',
-        'js/modal.js'
+        'js/modal.js',
+        'js/more.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

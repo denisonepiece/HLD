@@ -26,6 +26,7 @@ class ViewCaseAsset extends AssetBundle
         'libs/smooth-scroll.min.js',
         'libs/plyr/plyr.js',
         'js/plyr-change.js',
+        'js/more.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

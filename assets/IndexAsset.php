@@ -31,6 +31,7 @@ class IndexAsset extends AssetBundle
         'libs/smooth-scroll.min.js',
         'libs/rellax.min.js',
         'js/rellax-init.js',
+        'js/more.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

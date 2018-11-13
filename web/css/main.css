@@ -498,6 +498,14 @@ body.modalActive {
 		align-items: flex-start;
 	}
 
+    .go-brif {
+        right: 2.5%;
+    }
+
+    .go-brif.active {
+        bottom: 2%;
+    }
+
 }
 
 @media screen and (max-width:540px) {
@@ -505,4 +513,22 @@ body.modalActive {
 		width: 100%;
 	}
 
+}
+
+.go-brif {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: url(../img/chat.svg);
+    background-size: 2.5rem;
+    position: fixed;
+    z-index: 8000;
+    bottom: -10%;
+    right: .7%;
+    cursor: pointer;
+    display: block;
+    transition: all 200ms ease-out;
+}
+
+.go-brif.active {
+    bottom: 2.5%;
 }

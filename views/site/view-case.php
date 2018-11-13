@@ -31,11 +31,11 @@ ViewCaseAsset::register($this);
     <div class="wrapper-content">
         <header>
             <nav>
-                <div class="navigation-wrp cd-auto-hide-header" style="background: <?=$case['color']?>">
+                <div class="navigation-wrp cd-auto-hide-header" style="background: <?= $case['color'] ?>">
                     <div class="navigation-inner">
                         <div class="responsive-navigation">
                             <a href="<?= Url::to(['/site/index/']); ?>">
-                                <div class="responsive-navigation__logo" <?php if($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
+                                <div class="responsive-navigation__logo" <?php if ($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
                             </a>
                             <div class="responsive-navigation__humburger">
                                 <span></span>
@@ -44,11 +44,11 @@ ViewCaseAsset::register($this);
                         <div class="navigation" style="background-color: <?= $case['color'] ?>">
                             <div class="navigation-left">
                                 <a href="<?= Url::to(['/site/index/']); ?>" class="logo">
-                                    <div class="logo__text-elements" <?php if($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
+                                    <div class="logo__text-elements" <?php if ($case['theme'] == 'dark') echo 'style = "background: url(../img/logo-rev.svg) no-repeat right;" ' ?>></div>
                                 </a>
                             </div>
                             <div class="navigation-right">
-                                <div class="link-nav <?php if($case['theme'] == 'dark') echo 'link-nav-rev';  ?>" >
+                                <div class="link-nav <?php if ($case['theme'] == 'dark') echo 'link-nav-rev'; ?>">
                                     <ul>
                                         <li>
                                             <a href="<?= Url::to(['/site/index/']); ?>">Компания</a>
@@ -66,7 +66,7 @@ ViewCaseAsset::register($this);
                                     </ul>
                                 </div>
                                 <div class="info-nav">
-                                    <div class="info-nav__tel" <?php if($case['theme'] == 'dark') echo 'style="color: white"'; ?>>
+                                    <div class="info-nav__tel" <?php if ($case['theme'] == 'dark') echo 'style="color: white"'; ?>>
                                         <div><?= $this->params['contact']['telephone'] ?></div>
                                     </div>
                                 </div>
@@ -77,7 +77,8 @@ ViewCaseAsset::register($this);
             </nav>
         </header>
         <main>
-            <section class="section start-sec v2 case-intro" style="background-color: <?= $case['color'] ?>; color: <?= $case['text_color'] ?> ;">
+            <section class="section start-sec v2 case-intro"
+                     style="background-color: <?= $case['color'] ?>; color: <?= $case['text_color'] ?> ;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5 col-sm-4 col-xs-12">

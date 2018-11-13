@@ -171,6 +171,7 @@ use yii\helpers\Html;
         </footer>
     <?php } ?>
 </div>
+<a href="<?= Url::to(['site/brif']) ?>" class="go-brif" title="Заполнить бриф"></a>
 <?php $this->endBody() ?>
 </body>
 </html>
