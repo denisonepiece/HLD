@@ -11,9 +11,8 @@ ContactAsset::register($this);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-block tog-underCont v0">
+                    <div class="header-block">
                         <h1 class="heading hGray-v2">Контакты</h1>
-                        <h5>Наши двери открыты,<br/>телефоны готовы принимать звонки</h5>
                     </div>
                 </div>
             </div>
