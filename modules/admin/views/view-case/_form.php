@@ -24,7 +24,6 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'trim')->textarea(['rows' => 1]) ?>
             <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
 
-
             <?= $form->field($model, '1')->textarea(['rows' => 6]) ?>
 
             <?= $form->field($model, '2')->textarea(['rows' => 6]) ?>

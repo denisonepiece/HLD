@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "view_case".
  *
  * @property int $id
- * @property string $one
+ * @property string $1
  * @property string $two
  * @property string $three
  * @property string $four
@@ -43,6 +43,7 @@ class ViewCase extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
     public function rules()
     {
         return [
