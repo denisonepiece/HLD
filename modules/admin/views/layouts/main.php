@@ -56,7 +56,7 @@ AppAsset::register($this);
         NavBar::end();
         ?>
 
-        <div class="container">
+        <div class="container-fluid" style="margin-top: 60px;">
             <?= $content ?>
         </div>
     </div>

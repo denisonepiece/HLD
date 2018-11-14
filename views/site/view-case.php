@@ -122,26 +122,14 @@ ViewCaseAsset::register($this);
                     </div>
                 </div>
             </section>
-            <?= $view['one']; ?>
-            <?= $view['two']; ?>
-            <?= $view['three']; ?>
-            <?= $view['four']; ?>
-            <?= $view['five']; ?>
-            <?= $view['six']; ?>
-            <?= $view['seven']; ?>
-            <?= $view['eight']; ?>
-            <?= $view['nine']; ?>
-            <?= $view['ten']; ?>
-            <?= $view['eleven']; ?>
-            <?= $view['twelve']; ?>
-            <?= $view['thirteen']; ?>
-            <?= $view['fourteen']; ?>
-            <?= $view['fifteen']; ?>
-            <?= $view['sixteen']; ?>
-            <?= $view['seventeen']; ?>
-            <?= $view['eighteen']; ?>
-            <?= $view['nineteen']; ?>
-            <?= $view['twenty']; ?>
+            <?php
+            $numbers = explode(' ',$view['trim'] );
+
+            for($i = 0; $i < 20; $i++) {
+                echo $view[$numbers[$i]];
+            }
+
+            ?>
             <section class="section section-v1">
                 <div class="container-fluid">
                     <div class="row">
