@@ -46,8 +46,8 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['1', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'name'], 'required'],
-            [['1', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'name'], 'required'],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -59,7 +59,7 @@ class ViewCase extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            '1' => 'One',
+            'one' => 'One',
             'two' => 'Two',
             'three' => 'Three',
             'four' => 'Four',

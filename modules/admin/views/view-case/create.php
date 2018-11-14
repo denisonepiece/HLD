@@ -10,6 +10,8 @@ $this->title = 'Добавить вид';
 ?>
 <div class="view-case-create">
 
+<!--    <h2>--><?//= Html::encode($this->title) ?><!--</h2>-->
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
