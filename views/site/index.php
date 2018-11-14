@@ -51,7 +51,7 @@ IndexAsset::register($this);
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 list-count">
                     <div class="header-block tog-underCont">
-                        <h5 class="heading">Dизайн</h5>
+                        <h5 class="heading">Брендинг</h5>
                     </div>
                     <ul class="list-content list-togLine">
                         <?php
@@ -66,7 +66,7 @@ IndexAsset::register($this);
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 list-count">
                     <div class="header-block tog-underCont">
-                        <h5 class="heading">Поддержка</h5>
+                        <h5 class="heading">Digital-маркетинг</h5>
                     </div>
                     <ul class="list-content list-togLine">
                         <?php

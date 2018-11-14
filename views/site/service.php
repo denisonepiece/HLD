@@ -215,7 +215,7 @@ ServiceAsset::register($this);
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
-                        <h3 class="heading">Dизайн</h3>
+                        <h3 class="heading">Брендинг</h3>
                         <p class="p-style p-v1 header-block__p tog-underCont"><?=$service['design_about'] ?></p>
                     </div>
                 </div>
@@ -244,7 +244,7 @@ ServiceAsset::register($this);
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
                     <div class="header-block tog-underCont">
-                        <h3 class="heading">Поддержка и развитие</h3>
+                        <h3 class="heading">Digital-маркетинг</h3>
                         <p class="p-style p-v1 header-block__p tog-underCont"><?=$service['sup_about'] ?></p>
                     </div>
                 </div>
