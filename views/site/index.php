@@ -15,7 +15,7 @@ IndexAsset::register($this);
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="header-block tog-underCont">
-                        <h2 class="heading">HLD - digital агенство</h2>
+                        <h2 class="heading">HLD - это digital агенство</h2>
                         <p class="p-style p-v1"><?= $this->params['agency']['about'] ?>
                         </p>
                     </div>

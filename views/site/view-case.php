@@ -122,26 +122,40 @@ ViewCaseAsset::register($this);
                     </div>
                 </div>
             </section>
-            <?= $view['one']; ?>
-            <?= $view['two']; ?>
-            <?= $view['three']; ?>
-            <?= $view['four']; ?>
-            <?= $view['five']; ?>
-            <?= $view['six']; ?>
-            <?= $view['seven']; ?>
-            <?= $view['eight']; ?>
-            <?= $view['nine']; ?>
-            <?= $view['ten']; ?>
-            <?= $view['eleven']; ?>
-            <?= $view['twelve']; ?>
-            <?= $view['thirteen']; ?>
-            <?= $view['fourteen']; ?>
-            <?= $view['fifteen']; ?>
-            <?= $view['sixteen']; ?>
-            <?= $view['seventeen']; ?>
-            <?= $view['eighteen']; ?>
-            <?= $view['nineteen']; ?>
-            <?= $view['twenty']; ?>
+
+            <?php
+            $numbers = explode(' ',$view['trim'] );
+
+            //ебанный говнокод, кто видит это, идёт нахуй!!!!
+            for($i = 0; $i < 20; $i++) {
+                if($numbers[$i] == 1) $numbers[$i] = 'one';
+                if($numbers[$i] == 2) $numbers[$i] = 'two';
+                if($numbers[$i] == 3) $numbers[$i] = 'three';
+                if($numbers[$i] == 4) $numbers[$i] = 'four';
+                if($numbers[$i] == 5) $numbers[$i] = 'five';
+                if($numbers[$i] == 6) $numbers[$i] = 'six';
+                if($numbers[$i] == 7) $numbers[$i] = 'seven';
+                if($numbers[$i] == 8) $numbers[$i] = 'eight';
+                if($numbers[$i] == 9) $numbers[$i] = 'nine';
+                if($numbers[$i] == 10) $numbers[$i] = 'ten';
+                if($numbers[$i] == 11) $numbers[$i] = 'eleven';
+                if($numbers[$i] == 12) $numbers[$i] = 'twelve';
+                if($numbers[$i] == 13) $numbers[$i] = 'thirteen';
+                if($numbers[$i] == 14) $numbers[$i] = 'fourteen';
+                if($numbers[$i] == 15) $numbers[$i] = 'fifteen';
+                if($numbers[$i] == 16) $numbers[$i] = 'sixteen';
+                if($numbers[$i] == 17) $numbers[$i] = 'seventeen';
+                if($numbers[$i] == 18) $numbers[$i] = 'eighteen';
+                if($numbers[$i] == 19) $numbers[$i] = 'nineteen';
+                if($numbers[$i] == 20) $numbers[$i] = 'twenty';
+            }
+
+            for($i = 0; $i < 20; $i++) {
+                echo $view[$numbers[$i]];
+            }
+
+            ?>
+
             <section class="section section-v1">
                 <div class="container-fluid">
                     <div class="row">

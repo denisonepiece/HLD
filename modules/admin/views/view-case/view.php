@@ -28,6 +28,7 @@ $this->title = $model->name;
         'attributes' => [
             'id',
             'name',
+            'trim',
             'one:ntext',
             'two:ntext',
             'three:ntext',

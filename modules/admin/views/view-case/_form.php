@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 <div class="view-case-form">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-8">
             <?php $form = ActiveForm::begin(); ?>
 
             <h3 style="color: darkred;">Сначала загрузите изображения!</h3>
@@ -18,9 +18,10 @@ use yii\widgets\ActiveForm;
             <?= Html::a('Загрузить изображения', ['upload', 'id' => $model->id], ['class' => 'btn btn-danger']) ?>
             <br><br>
 
-
-
             <?= $form->field($model, 'name')->textarea(['rows' => 1]) ?>
+
+            <?= $form->field($model, 'trim')->textarea(['rows' => 1]) ?>
+            <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
 
             <?= $form->field($model, 'one')->textarea(['rows' => 6]) ?>
 
@@ -71,69 +72,46 @@ use yii\widgets\ActiveForm;
             <?php ActiveForm::end(); ?>
         </div>
 
-        <div class="col-md-5">
-            <h3>Текстовый блок</h3>
+        <div class="col-md-4" style="position: fixed; right: 10px; top: 50px;">
+            <h4>Текстовый блок</h4>
             <?php debug(htmlspecialchars('
 <section class="section section-v1" id="case-block-v1" style="background-color:; color: ;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7 col-sm col-xs">
-                    <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
-                    </p>
-                </div>
-            </div>
-        </div>
-</section>
-    ')); ?>
+                    <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.</p></div></div></div>
+</section>')); ?>
 
-            <h3>50/50</h3>
+            <h4>50/50</h4>
             <?php debug(htmlspecialchars('
 <section class="section case-fifty" id="case-block-v2" style="background-color:; color: ;">
     <div class="case-fifty__text">
-        <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
-                        аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
-        </p>
-    </div>
-    <div class="case-fifty__img" style="background-image: url(img/content/portfolio/1.jpg);">
-    </div>
-</section>
-            ')); ?>
+        <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.Наташа команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.</p></div><div class="case-fifty__img" style="background-image: url(img/content/portfolio/1.jpg);"></div>
+</section>')); ?>
 
-            <h3>50/50 reverse</h3>
+
+            <h4>50/50 reverse</h4>
             <?php debug(htmlspecialchars('
 <section class="section case-fifty reverse" id="case-block-v3" style="background-color:; color: ;">
     <div class="case-fifty__text">
         <p class="p-style p-v1">Наша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.
-                        аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.</p>
-    </div>
-    <div class="case-fifty__img" style="background-image: url(img/content/portfolio/1.jpg)">
-    </div>
-</section>
-               ')); ?>
+                        аша команда состоит из толково мыслящих молодых мозгов, создающая практичные интернет-решения, за которые не приходиться краснеть.</p></div><div class="case-fifty__img" style="background-image: url(img/content/portfolio/1.jpg)"></div>
+</section>')); ?>
 
-<!--            <h3>Изображение для связки с видео</h3>-->
-            <h3>Блок изображения</h3>
 
+            <h4>Блок изображения</h4>
             <?php debug(htmlspecialchars('
 <section class="section case-img-v1" id="case-block-v4">
     <img src="img/content/portfolio/test.jpg">
-</section>
-               ')); ?>
+</section>')); ?>
 
-            <h3>Блок видео</h3>
+
+            <h4>Блок видео</h4>
             <?php debug(htmlspecialchars('
 <section class="section case-video" id="case-block-v5">
     <div id="portfolio-player" class="js-player" data-plyr-provider="vimeo" data-plyr-embed-id="286840168"></div>
-</section>
-               ')); ?>
+</section>')); ?>
 
-<!--            <h3>Блок изображения</h3>-->
-<!--            --><?php //debug(htmlspecialchars('
-//<section class="section case-img-v2" id="case-block-v6">
-//    <div style="background-image: url(img/content/portfolio/2.jpg);"></div>
-//</section>
-//               ')); ?>
         </div>
     </div>
-
 </div>

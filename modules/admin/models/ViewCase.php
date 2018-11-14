@@ -46,7 +46,8 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
+            [['trim'], 'required'],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'trim'], 'string'],
             [['name', 'another'], 'string', 'max' => 255],
         ];
     }
@@ -77,6 +78,7 @@ class ViewCase extends \yii\db\ActiveRecord
             'nineteen' => 'Nineteen',
             'twenty' => 'Twenty',
             'name' => 'Name',
+            'trim' => 'Порядок',
             'another' => 'Another'
         ];
     }
