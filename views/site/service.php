@@ -30,7 +30,7 @@ ServiceAsset::register($this);
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12 list-count">
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Сбор информации и аналитика</h5>
+                                            <h6 class="heading">Сбор информации и аналитика</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content tog-underElements v3">
                                             <li>
@@ -47,7 +47,7 @@ ServiceAsset::register($this);
                                             </li>
                                         </ul>
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Проектирование</h5>
+                                            <h6 class="heading">Проектирование</h6>
                                         </div>
                                         <ul class="list-content togList">
                                             <li>
@@ -76,7 +76,7 @@ ServiceAsset::register($this);
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12 list-count">
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Дизайн интерфейса</h5>
+                                            <h6 class="heading">Дизайн интерфейса</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content tog-underElements v3">
                                             <li>
@@ -90,7 +90,7 @@ ServiceAsset::register($this);
                                             </li>
                                         </ul>
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Разработка пользовательского интерфейса (front-end)</h5>
+                                            <h6 class="heading">Разработка пользовательского интерфейса (front-end)</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content tog-underElements v3">
                                             <li>
@@ -104,7 +104,7 @@ ServiceAsset::register($this);
                                             </li>
                                         </ul>
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Разработка серверной части (back-end)</h5>
+                                            <h6 class="heading">Разработка серверной части (back-end)</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content tog-underElements v3">
                                             <li>
@@ -121,7 +121,7 @@ ServiceAsset::register($this);
                                             </li>
                                         </ul>
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Документирование</h5>
+                                            <h6 class="heading">Документирование</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content tog-underElements v3">
                                             <li>
@@ -132,7 +132,7 @@ ServiceAsset::register($this);
                                             </li>
                                         </ul>
                                         <div class="header-block tog-underCont">
-                                            <h5 class="heading">Внедрение</h5>
+                                            <h6 class="heading">Внедрение</h6>
                                         </div>
                                         <ul class="list-content togList section__inner-content">
                                             <li>
