@@ -46,9 +46,8 @@ class ViewCase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['trim'], 'required'],
-            [['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'], 'string'],
-            [['name', 'another', 'trim'], 'string', 'max' => 255],
+            [['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'], 'string'],
+            [['name', 'another'], 'string', 'max' => 255],
         ];
     }
 
@@ -57,29 +56,28 @@ class ViewCase extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            '1' => 'One',
-            '2' => 'Two',
-            '3' => 'Three',
-            '4' => 'Four',
-            '5' => 'Five',
-            '6' => 'Six',
-            '7' => 'Seven',
-            '8' => 'Eight',
-            '9' => 'Nine',
-            '10' => 'Ten',
-            '11' => 'Eleven',
-            '12' => 'Twelve',
-            '13' => 'Thirteen',
-            '14' => 'Fourteen',
-            '15' => 'Fifteen',
-            '16' => 'Sixteen',
-            '17' => 'Seventeen',
-            '18' => 'Eighteen',
-            '19' => 'Nineteen',
-            '20' => 'Twenty',
+            'one' => 'One',
+            'two' => 'Two',
+            'three' => 'Three',
+            'four' => 'Four',
+            'five' => 'Five',
+            'six' => 'Six',
+            'seven' => 'Seven',
+            'eight' => 'Eight',
+            'nine' => 'Nine',
+            'ten' => 'Ten',
+            'eleven' => 'Eleven',
+            'twelve' => 'Twelve',
+            'thirteen' => 'Thirteen',
+            'fourteen' => 'Fourteen',
+            'fifteen' => 'Fifteen',
+            'sixteen' => 'Sixteen',
+            'seventeen' => 'Seventeen',
+            'eighteen' => 'Eighteen',
+            'nineteen' => 'Nineteen',
+            'twenty' => 'Twenty',
             'name' => 'Name',
-            'another' => 'Another',
-            'trim' => 'Порядок',
+            'another' => 'Another'
         ];
     }
 }
