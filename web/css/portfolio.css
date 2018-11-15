@@ -147,11 +147,11 @@
 }
 
 .case-intro__logo {
-	height: 9rem;
-	width: 9rem;
-	margin-bottom: 1.5em;
+	height: 14rem;
+	width: 14rem;
+	/*margin-bottom: 1.5em;*/
 	background-repeat: no-repeat; 
-	background-position: center center;
+	/*background-position: center center;*/
 	background-size: contain;
 }
 
@@ -187,6 +187,10 @@
 @media screen and (max-width: 767px) {
 	.case-intro__client-info-left {
 		margin-bottom: 3rem;
+	}
+
+	.case-intro__logo {
+		background-position: center center;
 	}
 }
 

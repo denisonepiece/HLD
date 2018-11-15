@@ -81,19 +81,19 @@ ViewCaseAsset::register($this);
                      style="background-color: <?= $case['color'] ?>; color: <?= $case['text_color'] ?> ;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-sm-4 col-xs-12">
+                        <div class="col-md-5 col-sm-12 col-xs-12">
                             <div class="case-intro__client-info-left">
                                 <div class="case-intro__block-inner">
                                     <div class="case-intro__logo"
                                          style="background-image: url(/img/content/portfolio/<?= $case['logo'] ?>);">
                                     </div>
-                                    <div class="case-intro__label">
-                                        <span class="label"><?= $type[$case['type_service_id']]['type'] ?></span>
-                                    </div>
+<!--                                    <div class="case-intro__label">-->
+<!--                                        <span class="label">--><?//= $type[$case['type_service_id']]['type'] ?><!--</span>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-8 col-xs-12">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="case-intro__client-info-right">
                                 <div class="case-intro__block-inner">
                                     <div class="case-intro__desc-block">
